@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\usepackage{tcolorbox}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\begin{tcolorbox}[boxrule=0pt]
+  % title
+  \centering
+  {\Huge\bfseries GREEN'S vs STOKES' THEOREM}\\[10pt]
+  {\Large Green’s circulation theorem is Stokes on a plane.}\\[10pt]
+  % left
+  \begin{minipage}{0.48\textwidth}
+  \begin{tcolorbox}[title=GREEN'S THEOREM]
+    Planar region $D$ in the $xy$-plane
+
+    [R Green Plot Here]
+
+    \begin{align*}
+      &\quad\;\oint_C\left(P\,\mathrm dx+Q\,\mathrm dy\right)\\
+      &=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\,\mathrm dA
+    \end{align*}
+
+    Scalar curl integrated over a planar region.
+  \end{tcolorbox}
+  \end{minipage}
+  \hfill
+  % right
+  \begin{minipage}{0.48\textwidth}
+  \begin{tcolorbox}[title=STOKES' THEOREM]
+    Surface $S$ bounded by clos-ed curve $C$
+
+    [R Stokes Plot Here]
+
+    \begin{align*}
+      &\quad\;\oint_C \boldsymbol{F}\cdot\mathrm d\boldsymbol{r}\\
+      &=\iint_S (\nabla\times\boldsymbol{F})\cdot\mathrm d\boldsymbol{S}
+    \end{align*}
+
+    Curl flux over a surface.
+  \end{tcolorbox}
+  \end{minipage}
+  
+  % bottom
+  \begin{tcolorbox}[title=Recover Green from Stokes]
+  \begin{align*}
+  \boldsymbol F=(P,Q,0)\Bigg|\widehat{\boldsymbol n}=(0,0,1)\Bigg|\boldsymbol F\cdot\mathrm dr=P\mathrm dx+Q\mathrm dy\Bigg|(\nabla\times\boldsymbol F)\cdot\widehat{\boldsymbol n}\Bigg|\mathrm dS=\mathrm dA
+  \end{align*}
+  On a flat $xy$-surface, Stokes reduces exactly to Green's circulation form.
+  \end{tcolorbox}
+  
+  \vspace{8pt}
+  \hfill{\small @WenjeMaths}
+  \end{tcolorbox}
+\end{document}
