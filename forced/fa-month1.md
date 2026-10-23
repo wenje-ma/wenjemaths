@@ -38,7 +38,7 @@ $$
 \mathfrak G=\left\{\left[a,b\right]\text{ 上几乎处处有限的勒贝格可测函数}\right\},
 $$
 
-$f,g\in\mathfrak G$ 等价是指 $f\doteq_m g$, 仍以 $f$ 表示 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类; 对于 $f,g\in\mathcal S$, 定义 $d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\,\mathrm dm\left(t\right)$, 这是一个度量, 且 $d\left(f,g\right)=0$ 当且仅当 $f\doteq_m g$.
+$f,g\in\mathfrak G$ 等价是指 $f\overset m= g$, 仍以 $f$ 表示 $f$ 在 $\mathcal S=\mathfrak G/\sim$ 中对应的等价类; 对于 $f,g\in\mathcal S$, 定义 $d\left(f,g\right)=\int_{\left[a,b\right]}\frac{\left|f\left(t\right)-g\left(t\right)\right|}{1+\left|f\left(t\right)-g\left(t\right)\right|}\,\mathrm dm\left(t\right)$, 这是一个度量, 且 $d\left(f,g\right)=0$ 当且仅当 $f\overset m= g$.
 
 ## 定义 1.2.1 (哈梅尔基与维数)
 
@@ -228,7 +228,7 @@ $$
 
 ## 定义 1.4.7 (完备性)
 
-(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\epsilon> 0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)< \epsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);
+(i) 若 $\left\{x_n\right\}$ 满足: 对任意 $\varepsilon> 0$, 存在 $N$, 使 $n,m\ge N$ 时 $d\left(x_n,x_m\right)< \varepsilon$, 则称 $\left\{x_n\right\}$ 是基本点列 (柯西点列);
 
 (ii) 若每个基本点列都收敛, 则称 $X$ 完备;
 
@@ -298,15 +298,15 @@ $$
 
 ## 注 1.6.1 (网中的点不必属于集合本身)
 
-$\epsilon$-网中的点可以不必属于 $A$ 本身.
+$\varepsilon$-网中的点可以不必属于 $A$ 本身.
 
 ## 定理 1.6.2 (列紧 $\Leftrightarrow$ 覆盖紧)
 
 度量空间 $X$ 是紧集当且仅当它是列紧集 (即 $X$ 中任意点列都有收敛子列).
 
-## 定义 1.6.3 ($\epsilon$-网与完全有界集)
+## 定义 1.6.3 ($\varepsilon$-网与完全有界集)
 
-设 $A$ 是度量空间 $X$ 的子集, $\epsilon> 0$. 若存在 $X$ 的有限子集 $\left\{x_1,\dots,x_N\right\}$, 使得 $A\subset \bigcup_{i=1}^{N}U\left(x_i,\epsilon\right)$, 则称 $\left\{x_1,\dots,x_N\right\}$ 是 $A$ 的一个 $\epsilon$-网. 若对每个 $\epsilon> 0$, $A$ 都有有限的 $\epsilon$-网, 则称 $A$ 是完全有界集.
+设 $A$ 是度量空间 $X$ 的子集, $\varepsilon> 0$. 若存在 $X$ 的有限子集 $\left\{x_1,\dots,x_N\right\}$, 使得 $A\subset \bigcup_{i=1}^{N}U\left(x_i,\varepsilon\right)$, 则称 $\left\{x_1,\dots,x_N\right\}$ 是 $A$ 的一个 $\varepsilon$-网. 若对每个 $\varepsilon> 0$, $A$ 都有有限的 $\varepsilon$-网, 则称 $A$ 是完全有界集.
 
 ## 定理 1.6.3 (豪斯多夫定理)
 
@@ -322,9 +322,9 @@ $\epsilon$-网中的点可以不必属于 $A$ 本身.
 
 ## 定义 1.6.5 (一致连续与等度连续)
 
-(i) 设 $f:X\to Y$ 是度量空间之间的映射. 若对每个 $\epsilon> 0$ 存在 $\delta> 0$, 使得 $d_X\left(x_1,x_2\right)< \delta$ 蕴含 $d_Y\left(f\left(x_1\right),f\left(x_2\right)\right)< \epsilon$, 则称 $f$ 一致连续.
+(i) 设 $f:X\to Y$ 是度量空间之间的映射. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得 $d_X\left(x_1,x_2\right)< \delta$ 蕴含 $d_Y\left(f\left(x_1\right),f\left(x_2\right)\right)< \varepsilon$, 则称 $f$ 一致连续.
 
-(ii) 设 $X$ 是紧度量空间, $\mathscr{F}\subset C\left(X\right)$. 若对每个 $\epsilon> 0$ 存在 $\delta> 0$, 使得对一切 $f\in\mathscr{F}$ 及 $x_1,x_2\in X$, 由 $d\left(x_1,x_2\right)< \delta$ 可推出 $\left|f\left(x_1\right)-f\left(x_2\right)\right|< \epsilon$, 则称 $\mathscr{F}$ 是等度连续的.
+(ii) 设 $X$ 是紧度量空间, $\mathscr{F}\subset C\left(X\right)$. 若对每个 $\varepsilon> 0$ 存在 $\delta> 0$, 使得对一切 $f\in\mathscr{F}$ 及 $x_1,x_2\in X$, 由 $d\left(x_1,x_2\right)< \delta$ 可推出 $\left|f\left(x_1\right)-f\left(x_2\right)\right|< \varepsilon$, 则称 $\mathscr{F}$ 是等度连续的.
 
 ## 定理 1.6.5 (阿泽拉-阿斯卡里定理)
 
@@ -336,9 +336,9 @@ $\epsilon$-网中的点可以不必属于 $A$ 本身.
 
 (i) $A$ 是有界集;
 
-(ii) (等度 $L^{p}$-胎紧) 对每个 $\epsilon> 0$, 存在 $M> 0$, 使得 $\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm< \epsilon^{p}$, $\forall f\in A$;
+(ii) (等度 $L^{p}$-胎紧) 对每个 $\varepsilon> 0$, 存在 $M> 0$, 使得 $\int_{\left\{\left|x\right|> M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm dm< \varepsilon^{p}$, $\forall f\in A$;
 
-(iii) (等度 $L^{p}$-范数连续) 对每个 $\epsilon> 0$, 存在 $\delta> 0$, 使得 $\left\|f\left(x+h\right)-f\left(x\right)\right\|_{p}\le\epsilon$, $\forall f\in A$, $\forall \left|h\right|< \delta$.
+(iii) (等度 $L^{p}$-范数连续) 对每个 $\varepsilon> 0$, 存在 $\delta> 0$, 使得 $\left\|f\left(x+h\right)-f\left(x\right)\right\|_{p}\le\varepsilon$, $\forall f\in A$, $\forall \left|h\right|< \delta$.
 
 ## 定理 1.6.9 (紧度量空间上的性质)
 
