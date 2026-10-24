@@ -18,7 +18,13 @@ $\boldsymbol r_u,\boldsymbol r_v$ 张成的平面 $T_{\boldsymbol r}S=\mathrm{sp
 
 **公式 1.2 (函数图的几何量)**
 
-对函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$, 记 $p=f_x$, $q=f_y$, $r=f_{xx}$, $s=f_{xy}$, $t=f_{yy}$, $W=\left|\boldsymbol r_x\wedge\boldsymbol r_y\right|=\sqrt{1+p^{2}+q^{2}}$, 则第一基本形式 $\mathrm I=\left(1+p^{2}\right)\mathrm dx^{2}+2pq\,\mathrm dx\,\mathrm dy+\left(1+q^{2}\right)\mathrm dy^{2}$, 单位法向 $\boldsymbol e_3=\frac1W\left(-p,-q,1\right)$, 第二基本形式 $\mathrm{II}=\frac{r\,\mathrm dx^{2}+2s\,\mathrm dx\,\mathrm dy+t\,\mathrm dy^{2}}{W}$, 平均曲率 $H=\frac{\left(1+q^{2}\right)r-2pqs+\left(1+p^{2}\right)t}{2W^{3}}$.
+对函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$, 记 $p=f_x$, $q=f_y$, $r=f_{xx}$, $s=f_{xy}$, $t=f_{yy}$, $W=\left|\boldsymbol r_x\wedge\boldsymbol r_y\right|=\sqrt{1+p^{2}+q^{2}}$, 则第一基本形式
+
+$$
+\mathrm I=\left(1+p^{2}\right)\mathrm dx^{2}+2pq\,\mathrm dx\,\mathrm dy+\left(1+q^{2}\right)\mathrm dy^{2},
+$$
+
+单位法向 $\boldsymbol e_3=\frac1W\left(-p,-q,1\right)$, 第二基本形式 $\mathrm{II}=\frac{r\,\mathrm dx^{2}+2s\,\mathrm dx\,\mathrm dy+t\,\mathrm dy^{2}}{W}$, 平均曲率 $H=\frac{\left(1+q^{2}\right)r-2pqs+\left(1+p^{2}\right)t}{2W^{3}}$.
 
 **推导 1.3 (参数变换下法向)**
 
@@ -26,7 +32,11 @@ $\boldsymbol r_u,\boldsymbol r_v$ 张成的平面 $T_{\boldsymbol r}S=\mathrm{sp
 
 **定理 1.3 (极小曲面方程)**
 
-函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$ 是极小曲面当且仅当 $\left(1+f_y^{2}\right)f_{xx}-2f_xf_yf_{xy}+\left(1+f_x^{2}\right)f_{yy}=0$.
+函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$ 是极小曲面当且仅当
+
+$$
+\left(1+f_y^{2}\right)f_{xx}-2f_xf_yf_{xy}+\left(1+f_x^{2}\right)f_{yy}=0.
+$$
 
 **例 1.3 (谢尔克曲面)**
 
@@ -34,7 +44,11 @@ $\boldsymbol r_u,\boldsymbol r_v$ 张成的平面 $T_{\boldsymbol r}S=\mathrm{sp
 
 **例 1.5 (等值面)**
 
-等值面 $S_c=\left\{\left(x,y,z\right)\mid F\left(x,y,z\right)=c\right\}$: 当 $\nabla F\left(P\right)\neq\boldsymbol0$ ($\forall P\in S_c$) 时 $S_c$ 是曲面, $\nabla F$ 是 $S_c$ 的法向, 且 $S_c$ 在 $P_0=\left(x_0,y_0,z_0\right)$ 的切平面方程为 $F_x\left(P_0\right)\left(x-x_0\right)+F_y\left(P_0\right)\left(y-y_0\right)+F_z\left(P_0\right)\left(z-z_0\right)=0$.
+等值面 $S_c=\left\{\left(x,y,z\right)\mid F\left(x,y,z\right)=c\right\}$: 当 $\nabla F\left(P\right)\neq\boldsymbol0$ ($\forall P\in S_c$) 时 $S_c$ 是曲面, $\nabla F$ 是 $S_c$ 的法向, 且 $S_c$ 在 $P_0=\left(x_0,y_0,z_0\right)$ 的切平面方程为
+
+$$
+F_x\left(P_0\right)\left(x-x_0\right)+F_y\left(P_0\right)\left(y-y_0\right)+F_z\left(P_0\right)\left(z-z_0\right)=0.
+$$
 
 **定义 2.1 (弧长与弧长参数)**
 
@@ -54,7 +68,11 @@ $\boldsymbol r_u,\boldsymbol r_v$ 张成的平面 $T_{\boldsymbol r}S=\mathrm{sp
 
 **定义 2.3 (第一基本形式)**
 
-$\mathrm I=\left(\mathrm d\boldsymbol r,\mathrm d\boldsymbol r\right)=E\,\mathrm du^{2}+2F\,\mathrm du\,\mathrm dv+G\,\mathrm dv^{2}$, 其中 $E=\left\langle\boldsymbol r_u,\boldsymbol r_u\right\rangle$, $F=\left\langle\boldsymbol r_u,\boldsymbol r_v\right\rangle$, $G=\left\langle\boldsymbol r_v,\boldsymbol r_v\right\rangle$; 它给出切向量长度的平方.
+$$
+\mathrm I=\left(\mathrm d\boldsymbol r,\mathrm d\boldsymbol r\right)=E\,\mathrm du^{2}+2F\,\mathrm du\,\mathrm dv+G\,\mathrm dv^{2},
+$$
+
+其中 $E=\left\langle\boldsymbol r_u,\boldsymbol r_u\right\rangle$, $F=\left\langle\boldsymbol r_u,\boldsymbol r_v\right\rangle$, $G=\left\langle\boldsymbol r_v,\boldsymbol r_v\right\rangle$; 它给出切向量长度的平方.
 
 **定义 3.1 (空间曲线的曲率与弗勒内标架)**
 
@@ -70,7 +88,13 @@ $\dot{\boldsymbol t}=k\boldsymbol n$, $\dot{\boldsymbol n}=-k\boldsymbol t+\tau\
 
 **定理 3.3 (弧长参数曲线的三阶渐近展开)**
 
-设 $\boldsymbol r$ 以弧长为参数, 在 $s_0=0$ 处有 $\boldsymbol r\left(s\right)=\boldsymbol r\left(0\right)+s\,\dot{\boldsymbol r}\left(0\right)+\frac{s^{2}}2\ddot{\boldsymbol r}\left(0\right)+O\left(s^{3}\right)$, 其中 $\ddot{\boldsymbol r}\left(0\right)=k\left(0\right)\boldsymbol n\left(0\right)$.
+设 $\boldsymbol r$ 以弧长为参数, 在 $s_0=0$ 处有
+
+$$
+\boldsymbol r\left(s\right)=\boldsymbol r\left(0\right)+s\,\dot{\boldsymbol r}\left(0\right)+\frac{s^{2}}2\ddot{\boldsymbol r}\left(0\right)+O\left(s^{3}\right),
+$$
+
+其中 $\ddot{\boldsymbol r}\left(0\right)=k\left(0\right)\boldsymbol n\left(0\right)$.
 
 **例 3.3 (球面的第二基本形式)**
 
@@ -78,7 +102,11 @@ $\dot{\boldsymbol t}=k\boldsymbol n$, $\dot{\boldsymbol n}=-k\boldsymbol t+\tau\
 
 **定义 3.4 (第二基本形式)**
 
-$\mathrm{II}=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle\mathrm du^{2}+2\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle\mathrm du\,\mathrm dv+\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle\mathrm dv^{2}=L\,\mathrm du^{2}+2M\,\mathrm du\,\mathrm dv+N\,\mathrm dv^{2}$, 其中 $L=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle$, $M=\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle$, $N=\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle$.
+$$
+\mathrm{II}=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle\mathrm du^{2}+2\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle\mathrm du\,\mathrm dv+\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle\mathrm dv^{2}=L\,\mathrm du^{2}+2M\,\mathrm du\,\mathrm dv+N\,\mathrm dv^{2},
+$$
+
+其中 $L=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle$, $M=\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle$, $N=\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle$.
 
 **性质 3.4 (第二基本形式在参数变换下变号)**
 
@@ -102,7 +130,11 @@ $\mathbb E^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 **定义 4.2 (法曲率)**
 
-曲面沿非零切向量 $\boldsymbol w=\lambda\boldsymbol r_u+\mu\boldsymbol r_v$ 的法曲率 $k_n\left(\boldsymbol w\right)=\frac{L\lambda^{2}+2M\lambda\mu+N\mu^{2}}{E\lambda^{2}+2F\lambda\mu+G\mu^{2}}=\frac{\mathrm{II}\left(\boldsymbol w,\boldsymbol w\right)}{\mathrm I\left(\boldsymbol w,\boldsymbol w\right)}$.
+曲面沿非零切向量 $\boldsymbol w=\lambda\boldsymbol r_u+\mu\boldsymbol r_v$ 的法曲率
+
+$$
+k_n\left(\boldsymbol w\right)=\frac{L\lambda^{2}+2M\lambda\mu+N\mu^{2}}{E\lambda^{2}+2F\lambda\mu+G\mu^{2}}=\frac{\mathrm{II}\left(\boldsymbol w,\boldsymbol w\right)}{\mathrm I\left(\boldsymbol w,\boldsymbol w\right)}.
+$$
 
 **定理 4.2 (空间曲线基本定理)**
 
@@ -142,11 +174,23 @@ $\mathbb E^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 **公式 5.5 (面积元与高斯映射面积)**
 
-曲面面积元 $\mathrm dA=\left\langle\boldsymbol r_u\wedge\boldsymbol r_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=\sqrt{EG-F^{2}}\,\mathrm du\,\mathrm dv$; 在单位法向映射 $g:\boldsymbol r\left(u,v\right)\mapsto\boldsymbol n\left(u,v\right)$ 下, $\mathrm d\sigma=\left\langle\boldsymbol n_u\wedge\boldsymbol n_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=K\,\mathrm dA$, 且若 $D$ 是曲面 $S$ 上含点 $P$ 的区域, 则 $\lim_{D\to P}\frac{\text{面积}\left(g\left(D\right)\right)}{\text{面积}\left(D\right)}=K\left(P\right)$.
+曲面面积元
+
+$$
+\mathrm dA=\left\langle\boldsymbol r_u\wedge\boldsymbol r_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=\sqrt{EG-F^{2}}\,\mathrm du\,\mathrm dv;
+$$
+
+在单位法向映射 $g:\boldsymbol r\left(u,v\right)\mapsto\boldsymbol n\left(u,v\right)$ 下, $\mathrm d\sigma=\left\langle\boldsymbol n_u\wedge\boldsymbol n_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=K\,\mathrm dA$, 且若 $D$ 是曲面 $S$ 上含点 $P$ 的区域, 则 $\lim_{D\to P}\frac{\text{面积}\left(g\left(D\right)\right)}{\text{面积}\left(D\right)}=K\left(P\right)$.
 
 **公式 6.1 (旋转曲面的基本量)**
 
-旋转曲面 $\boldsymbol r\left(u,v\right)=\left(f\left(u\right)\cos v,\ f\left(u\right)\sin v,\ g\left(u\right)\right)$ ($f>0$) 的第一, 第二基本形式系数为 $E=\left(f'\right)^{2}+\left(g'\right)^{2}$, $F=0$, $G=f^{2}$, $L=\frac{f'g''-f''g'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, $M=0$, $N=\frac{fg'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$.
+旋转曲面
+
+$$
+\boldsymbol r\left(u,v\right)=\left(f\left(u\right)\cos v,\ f\left(u\right)\sin v,\ g\left(u\right)\right)
+$$
+
+($f>0$) 的第一, 第二基本形式系数为 $E=\left(f'\right)^{2}+\left(g'\right)^{2}$, $F=0$, $G=f^{2}$, $L=\frac{f'g''-f''g'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, $M=0$, $N=\frac{fg'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$.
 
 **法里-米尔诺定理 (题面给定)**
 
