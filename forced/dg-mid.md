@@ -118,7 +118,7 @@ $\boldsymbol r_{u}\left(a,b\right)$ 和 $\boldsymbol r_{v}\left(a,b\right)$ 张�
 
 ## 推导 3.1.2 (参数变换下法向)
 
-设 $\left(u,v\right)\to\left(\tilde u,\tilde v\right)$ 是参数变换, 雅可比行列式 $J:=\frac{\partial\left(u,v\right)}{\partial\left(\tilde u,\tilde v\right)}$, 则 $\boldsymbol r_{\tilde u}\wedge\boldsymbol r_{\tilde v}=\det J\,\boldsymbol r_u\wedge\boldsymbol r_v$; 因而同向参数变换 ($\det J0$) 不改变单位法向 $\boldsymbol n$, 反向参数变换 ($\det J< 0$) 使 $\boldsymbol n$ 变号.
+设 $\left(u,v\right)\to\left(\widetilde u,\widetilde v\right)$ 是参数变换, 雅可比行列式 $J:=\frac{\partial\left(u,v\right)}{\partial\left(\widetilde u,\widetilde v\right)}$, 则 $\boldsymbol r_{\widetilde u}\wedge\boldsymbol r_{\widetilde v}=\det J\,\boldsymbol r_u\wedge\boldsymbol r_v$; 因而同向参数变换 ($\det J0$) 不改变单位法向 $\boldsymbol n$, 反向参数变换 ($\det J< 0$) 使 $\boldsymbol n$ 变号.
 
 ## 定义 3.1.3 (单位法向量)
 
