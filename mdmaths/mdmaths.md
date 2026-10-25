@@ -19,7 +19,7 @@ Anki 是一个免费的 "记忆卡片" 软件 (开源, 跨平台, 桌面, 安卓
 ## mdmath 支持什么
 
 - Markdown 基础语法: 标题, 加粗, 引用, 列表, 分割线;
-- 行内 `$...$` 和行间 `$$...$$` 公式 (含 `\tag` 编号, `\begin{cases}`, `\begin{pmatrix}`, `\begin{align}`) , 用的是和 MPE 同款的 KaTeX 引擎;
+- 行内 `$...$` 和行间 `$$...$$` 公式 (含 `\tag` 编号, `\begin{cases}`, `\begin{bmatrix}`, `\begin{align}`) , 用的是和 MPE 同款的 KaTeX 引擎;
 - 管道表格 (单元格里也能放公式) ;
 - 行内 HTML (`<br>`, `<div align=center>`) ;
 - 代码块.
