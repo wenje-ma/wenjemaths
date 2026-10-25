@@ -100,7 +100,7 @@ git --version
 1. 在桌面新建一个文件夹，命名为 `Github`（名字随意，别用中文就行）。
 2. 打开 `vscode`，点左上角 **文件 → 打开文件夹**，选中刚才的 `Github` 文件夹。
 3. 按 `Ctrl + J`（macOS 是 `Cmd + J`）打开底部终端面板。
-4. 终端里会出现类似 `PS C:\Users\11111\Github>` 的提示符，说明已经定位好了（见下图）：
+4. 终端里会出现类似 `PS C:\Users\11111\Github> ` 的提示符，说明已经定位好了（见下图）：
 
 ![vscode-git](figures/vscode-git.png)
 
@@ -135,7 +135,7 @@ Resolving deltas: 100% (245/245), done.
 **想克隆其他学科仓库？** 把命令里的 `topology` 换成任意仓库名即可：
 
 ```bash
-git clone https://github.com/wenje-ma/<仓库名>
+git clone https://github.com/wenje-ma/< 仓库名> 
 ```
 
 ### 克隆失败了?
@@ -204,7 +204,7 @@ gh repo clone wenje-ma/topology
 注意写法是 **`所有者/仓库名`**（没有网址）。想克隆别的学科，把 `topology` 换掉即可：
 
 ```bash
-gh repo clone wenje-ma/<仓库名>
+gh repo clone wenje-ma/< 仓库名> 
 ```
 
 ### 和 `git clone` 的区别
