@@ -6,7 +6,7 @@
 
 ## 定义 2.1.1 (正则曲线)
 
-曲线 $\boldsymbol r:\left(a,b\right)\to E^2\left(E^3\right)$ 称为正则曲线, 是指 (1) 每一个分量都是 $C^{\infty}$ 函数; (2) $\left|\boldsymbol r'\left(t\right)\right|>0$, $\forall\,t\in\left(a,b\right)$ 成立.
+曲线 $\boldsymbol r:\left(a,b\right)\to E^2\left(E^3\right)$ 称为正则曲线, 是指 (1) 每一个分量都是 $C^{\infty}$ 函数; (2) $\left|\boldsymbol r'\left(t\right)\right|> 0$, $\forall\,t\in\left(a,b\right)$ 成立.
 
 ## 定义 2.2.1 (弧长与弧长参数)
 
@@ -24,7 +24,7 @@
 
 ## 定义 2.2.3 (弧长参数化)
 
-固定起点 $a$, 定义 $s\left(t\right):=\int_a^t\left|\boldsymbol r'\left(u\right)\right|\,\mathrm du$; 因 $s'\left(t\right)=\left|\boldsymbol r'\left(t\right)\right|>0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol r\left(s\right):=\boldsymbol r\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$.
+固定起点 $a$, 定义 $s\left(t\right):=\int_a^t\left|\boldsymbol r'\left(u\right)\right|\,\mathrm du$; 因 $s'\left(t\right)=\left|\boldsymbol r'\left(t\right)\right|> 0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol r\left(s\right):=\boldsymbol r\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$.
 
 ## 命题 2.2.4 (弧长参数的判别)
 
@@ -40,7 +40,7 @@
 
 ## 定理 2.3.1 (挠率为零⟺平面曲线)
 
-设空间曲线 $\boldsymbol r$ 的曲率 $k>0$, 则 $\boldsymbol r$ 落在某个平面上的充要条件是 $\tau\equiv0$.
+设空间曲线 $\boldsymbol r$ 的曲率 $k> 0$, 则 $\boldsymbol r$ 落在某个平面上的充要条件是 $\tau\equiv0$.
 
 ## 定义 2.3.2 (曲率)
 
@@ -48,15 +48,21 @@
 
 ## 例 2.3.2 (圆柱螺线)
 
-圆柱螺旋线 $\boldsymbol r\left(t\right)=\left(a\cos t,a\sin t,bt\right)$ ($a>0$) 的曲率和挠率都是常数.
+圆柱螺旋线 $\boldsymbol r\left(t\right)=\left(a\cos t,a\sin t,bt\right)$ ($a> 0$) 的曲率和挠率都是常数.
 
 ## 定义 2.3.3 (主法向量)
 
-当 $k\left(s\right)>0$ 时, 由 $\dot{\boldsymbol t}\left(s\right)$ 决定的单位向量 $\boldsymbol n\left(s\right):=\frac{\dot{\boldsymbol t}\left(s\right)}{\left|\dot{\boldsymbol t}\left(s\right)\right|}$ 称为曲线 $\boldsymbol r$ 的主法向量.
+当 $k\left(s\right)> 0$ 时, 由 $\dot{\boldsymbol t}\left(s\right)$ 决定的单位向量 $\boldsymbol n\left(s\right):=\frac{\dot{\boldsymbol t}\left(s\right)}{\left|\dot{\boldsymbol t}\left(s\right)\right|}$ 称为曲线 $\boldsymbol r$ 的主法向量.
 
 ## 定理 2.3.3 (弧长参数曲线的二阶渐近展开)
 
-设 $\boldsymbol r$ 以弧长为参数, 在 $s_0=0$ 处有 $\boldsymbol r\left(s\right)=\boldsymbol r\left(0\right)+s\,\dot{\boldsymbol r}\left(0\right)+\frac{s^{2}}2\ddot{\boldsymbol r}\left(0\right)+O\left(s^{3}\right)$, 其中 $\dot{\boldsymbol r}=\boldsymbol t(0)$, $\ddot{\boldsymbol r}\left(0\right)=k\left(0\right)\boldsymbol n\left(0\right)$.
+设 $\boldsymbol r$ 以弧长为参数, 在 $s_0=0$ 处有
+
+$$
+\boldsymbol r\left(s\right)=\boldsymbol r\left(0\right)+s\,\dot{\boldsymbol r}\left(0\right)+\frac{s^{2}}2\ddot{\boldsymbol r}\left(0\right)+O\left(s^{3}\right),
+$$
+
+其中 $\dot{\boldsymbol r}=\boldsymbol t\left(0\right)$, $\ddot{\boldsymbol r}\left(0\right)=k\left(0\right)\boldsymbol n\left(0\right)$.
 
 ## 定义 2.3.4 (副法向量)
 
@@ -84,7 +90,7 @@ $\mathbb E^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 ## 定理 2.4.2 (空间曲线基本定理)
 
-(1) 设 $\boldsymbol r_1,\boldsymbol r_2$ 是 $\mathbb E^3$ 的两条弧长参数曲线, 定义在同一参数区间上, 且 $k_1=k_2>0$, $\tau_1=\tau_2$, 则存在 $\mathbb E^3$ 的一个刚体运动把 $\boldsymbol r_2$ 变为 $\boldsymbol r_1$; (2) 设 $k=k\left(s\right)$, $\tau=\tau\left(s\right)$ 是连续可微函数且 $k\left(s\right)>0$, 则存在以 $s$ 为弧长参数、以 $k$ 和 $\tau$ 为曲率和挠率的弧长参数曲线.
+(1) 设 $\boldsymbol r_1,\boldsymbol r_2$ 是 $\mathbb E^3$ 的两条弧长参数曲线, 定义在同一参数区间上, 且 $k_1=k_2> 0$, $\tau_1=\tau_2$, 则存在 $\mathbb E^3$ 的一个刚体运动把 $\boldsymbol r_2$ 变为 $\boldsymbol r_1$; (2) 设 $k=k\left(s\right)$, $\tau=\tau\left(s\right)$ 是连续可微函数且 $k\left(s\right)> 0$, 则存在以 $s$ 为弧长参数、以 $k$ 和 $\tau$ 为曲率和挠率的弧长参数曲线.
 
 ## 定理 2.4.3 (给定曲率挠率存在弧长参数曲线)
 
@@ -96,7 +102,7 @@ $\mathbb E^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 ## 例 2.4.5 (曲率挠率均为常数的曲线分类)
 
-设 $\boldsymbol r$ 是 $\mathbb E^3$ 的曲线, 它的挠率 $\tau$ 和曲率 $\kappa$ 是常数: (1) $\kappa=0$, 这时 $\boldsymbol r$ 是直线; (2) $\kappa>0$, $\tau=0$ 时, $\boldsymbol r$ 是圆; (3) $\kappa>0$, $\tau\ne0$, 由空间曲线基本定理及圆柱螺线例知 $\boldsymbol r$ 是圆柱螺旋线.
+设 $\boldsymbol r$ 是 $\mathbb E^3$ 的曲线, 它的挠率 $\tau$ 和曲率 $\kappa$ 是常数: (1) $\kappa=0$, 这时 $\boldsymbol r$ 是直线; (2) $\kappa> 0$, $\tau=0$ 时, $\boldsymbol r$ 是圆; (3) $\kappa> 0$, $\tau\ne0$, 由空间曲线基本定理及圆柱螺线例知 $\boldsymbol r$ 是圆柱螺旋线.
 
 ## 习题 2.4.5 (一般参数下的曲率与挠率公式)
 
@@ -120,11 +126,21 @@ $\boldsymbol r_{u}\wedge\boldsymbol r_{v}$ 是与 $\boldsymbol r_{u}$ 和 $\bold
 
 ## 例 3.1.5 (等值面)
 
-等值面 $S_c=\left\{\left(x,y,z\right)\mid F\left(x,y,z\right)=c\right\}$: 当 $\nabla F\left(P\right)\neq\boldsymbol0$ ($\forall P\in S_c$) 时 $S_c$ 是曲面, $\nabla F$ 是 $S_c$ 的法向, 且 $S_c$ 在 $P_0=\left(x_0,y_0,z_0\right)$ 的切平面方程为 $F_x\left(P_0\right)\left(x-x_0\right)+F_y\left(P_0\right)\left(y-y_0\right)+F_z\left(P_0\right)\left(z-z_0\right)=0$.
+等值面 $S_c=\left\{\left(x,y,z\right)\mid F\left(x,y,z\right)=c\right\}$: 当 $\nabla F\left(P\right)\neq\boldsymbol0$ ($\forall P\in S_c$) 时 $S_c$ 是曲面, $\nabla F$ 是 $S_c$ 的法向, 且 $S_c$ 在 $P_0=\left(x_0,y_0,z_0\right)$ 的切平面方程为
+
+$$
+F_x\left(P_0\right)\left(x-x_0\right)+F_y\left(P_0\right)\left(y-y_0\right)+F_z\left(P_0\right)\left(z-z_0\right)=0.
+$$
 
 ## 定义 3.2.1 (第一基本形式)
 
-设 $E=\left\langle\boldsymbol r_{u},\boldsymbol r_{u}\right\rangle$, $F=\left\langle\boldsymbol r_{u},\boldsymbol r_{v}\right\rangle$, $G=\left\langle\boldsymbol r_{v},\boldsymbol r_{v}\right\rangle$, 二次微分式 $I=E\,\mathrm du\,\mathrm du+2F\,\mathrm du\,\mathrm dv+G\,\mathrm dv\,\mathrm dv=\left\langle\mathrm d\boldsymbol r,\mathrm d\boldsymbol r\right\rangle$ 称为曲面 $S$ 的第一基本形式; 它给出曲面上曲线的弧长微元的平方以及切向量长度的平方.
+设 $E=\left\langle\boldsymbol r_{u},\boldsymbol r_{u}\right\rangle$, $F=\left\langle\boldsymbol r_{u},\boldsymbol r_{v}\right\rangle$, $G=\left\langle\boldsymbol r_{v},\boldsymbol r_{v}\right\rangle$, 二次微分式
+
+$$
+I=E\,\mathrm du\,\mathrm du+2F\,\mathrm du\,\mathrm dv+G\,\mathrm dv\,\mathrm dv=\left\langle\mathrm d\boldsymbol r,\mathrm d\boldsymbol r\right\rangle
+$$
+
+称为曲面 $S$ 的第一基本形式; 它给出曲面上曲线的弧长微元的平方以及切向量长度的平方.
 
 ## 定理 3.2.1 (第一基本形式与参数选取无关)
 
@@ -132,11 +148,17 @@ $\boldsymbol r_{u}\wedge\boldsymbol r_{v}$ 是与 $\boldsymbol r_{u}$ 和 $\bold
 
 ## 定义 3.3.1 (第二基本形式)
 
-设 $\boldsymbol n=\frac{\boldsymbol r_{u}\wedge\boldsymbol r_{v}}{\left|\boldsymbol r_{u}\wedge\boldsymbol r_{v}\right|}$ 是 $S$ 的单位法向量, $L=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle$, $M=\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle$, $N=\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle$, 二次微分式 $II=-\left\langle\mathrm d\boldsymbol r,\mathrm d\boldsymbol n\right\rangle=L\,\mathrm du\,\mathrm du+2M\,\mathrm du\,\mathrm dv+N\,\mathrm dv\,\mathrm dv=\left\langle\boldsymbol r_{\alpha\beta},\boldsymbol n\right\rangle\,\mathrm du^{\alpha}\,\mathrm du^{\beta}$ 称为曲面 $S$ 的第二基本形式.
+设 $\boldsymbol n=\frac{\boldsymbol r_{u}\wedge\boldsymbol r_{v}}{\left|\boldsymbol r_{u}\wedge\boldsymbol r_{v}\right|}$ 是 $S$ 的单位法向量, $L=\left\langle\boldsymbol r_{uu},\boldsymbol n\right\rangle$, $M=\left\langle\boldsymbol r_{uv},\boldsymbol n\right\rangle$, $N=\left\langle\boldsymbol r_{vv},\boldsymbol n\right\rangle$, 二次微分式
+
+$$
+II=-\left\langle\mathrm d\boldsymbol r,\mathrm d\boldsymbol n\right\rangle=L\,\mathrm du\,\mathrm du+2M\,\mathrm du\,\mathrm dv+N\,\mathrm dv\,\mathrm dv=\left\langle\boldsymbol r_{\alpha\beta},\boldsymbol n\right\rangle\,\mathrm du^{\alpha}\,\mathrm du^{\beta}
+$$
+
+称为曲面 $S$ 的第二基本形式.
 
 ## 定义 3.3.1 (椭圆点、双曲点与抛物点)
 
-设 $\boldsymbol r\left(u_{0}\right)\in S$, 主曲率为 $k_{1}\left(u_{0}\right)\le k_{2}\left(u_{0}\right)$. 若 $k_{1}k_{2}>0$ (即 $K>0$), 则称 $\boldsymbol r\left(u_{0}\right)$ 为椭圆点; 若 $k_{1}k_{2}<0$ (即 $K<0$), 则称其为双曲点; 若 $k_{1}k_{2}=0$ (即 $K=0$), 则称其为抛物点; 特别若 $k_{1}=k_{2}=0$, 则称其为平点.
+设 $\boldsymbol r\left(u_{0}\right)\in S$, 主曲率为 $k_{1}\left(u_{0}\right)\le k_{2}\left(u_{0}\right)$. 若 $k_{1}k_{2}> 0$ (即 $K> 0$), 则称 $\boldsymbol r\left(u_{0}\right)$ 为椭圆点; 若 $k_{1}k_{2}<0$ (即 $K<0$), 则称其为双曲点; 若 $k_{1}k_{2}=0$ (即 $K=0$), 则称其为抛物点; 特别若 $k_{1}=k_{2}=0$, 则称其为平点.
 
 ## 定义 3.3.1 (渐近方向与渐近线)
 
@@ -152,7 +174,13 @@ $\boldsymbol r_{u}\wedge\boldsymbol r_{v}$ 是与 $\boldsymbol r_{u}$ 和 $\bold
 
 ## 定义 3.4.1 (魏因加滕变换)
 
-切平面到自身的线性变换 $W:T_{P}S\to T_{P}S$, $\lambda\boldsymbol r_{u}+\mu\boldsymbol r_{v}\mapsto W\left(\lambda\boldsymbol r_{u}+\mu\boldsymbol r_{v}\right)=-\left(\lambda\boldsymbol n_{u}+\mu\boldsymbol n_{v}\right)$ 称为曲面的魏因加滕变换.
+切平面到自身的线性变换 $W:T_{P}S\to T_{P}S$,
+
+$$
+\lambda\boldsymbol r_{u}+\mu\boldsymbol r_{v}\mapsto W\left(\lambda\boldsymbol r_{u}+\mu\boldsymbol r_{v}\right)=-\left(\lambda\boldsymbol n_{u}+\mu\boldsymbol n_{v}\right)
+$$
+
+称为曲面的魏因加滕变换.
 
 ## 命题 3.4.1 (图形式曲面的基本量)
 
@@ -204,7 +232,13 @@ $k$ 是主曲率当且仅当它是方程 $\det\left(b_{\alpha\beta}-k g_{\alpha\
 
 ## 公式 3.5.5 (面积元与高斯映射面积)
 
-曲面面积元 $\mathrm dA=\left\langle\boldsymbol r_u\wedge\boldsymbol r_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=\sqrt{EG-F^{2}}\,\mathrm du\,\mathrm dv$; 在单位法向映射 $g:\boldsymbol r\left(u,v\right)\mapsto\boldsymbol n\left(u,v\right)$ 下, $\mathrm d\sigma=\left\langle\boldsymbol n_u\wedge\boldsymbol n_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=K\,\mathrm dA$, 且若 $D$ 是曲面 $S$ 上含点 $P$ 的区域, 则 $\lim_{D\to P}\frac{\text{面积}\left(g\left(D\right)\right)}{\text{面积}\left(D\right)}=K\left(P\right)$.
+曲面面积元
+
+$$
+\mathrm dA=\left\langle\boldsymbol r_u\wedge\boldsymbol r_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=\sqrt{EG-F^{2}}\,\mathrm du\,\mathrm dv;
+$$
+
+在单位法向映射 $g:\boldsymbol r\left(u,v\right)\mapsto\boldsymbol n\left(u,v\right)$ 下, $\mathrm d\sigma=\left\langle\boldsymbol n_u\wedge\boldsymbol n_v,\boldsymbol n\right\rangle\mathrm du\,\mathrm dv=K\,\mathrm dA$, 且若 $D$ 是曲面 $S$ 上含点 $P$ 的区域, 则 $\lim_{D\to P}\frac{\text{面积}\left(g\left(D\right)\right)}{\text{面积}\left(D\right)}=K\left(P\right)$.
 
 ## 定义 3.5.6 (平均曲率与总曲率)
 
@@ -220,7 +254,11 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 ## 命题 3.5.9 (曲面的二阶近似)
 
-在取 $\boldsymbol r_{u}\left(P\right)=\boldsymbol e_{1}$, $\boldsymbol r_{v}\left(P\right)=\boldsymbol e_{2}$ 为主方向的参数下, 曲面在点 $P$ 附近满足 $\boldsymbol r\left(u_{0}+\Delta u,v_{0}+\Delta v\right)-\boldsymbol r\left(u_{0},v_{0}\right)=\Delta u\,\boldsymbol e_{1}+\Delta v\,\boldsymbol e_{2}+\frac1{2}\left(k_{1}\Delta u^{2}+k_{2}\Delta v^{2}\right)\boldsymbol n\left(P\right)+o\left(\Delta u^{2}+\Delta v^{2}\right)$.
+在取 $\boldsymbol r_{u}\left(P\right)=\boldsymbol e_{1}$, $\boldsymbol r_{v}\left(P\right)=\boldsymbol e_{2}$ 为主方向的参数下, 曲面在点 $P$ 附近满足
+
+$$
+\boldsymbol r\left(u_{0}+\Delta u,v_{0}+\Delta v\right)-\boldsymbol r\left(u_{0},v_{0}\right)=\Delta u\,\boldsymbol e_{1}+\Delta v\,\boldsymbol e_{2}+\frac1{2}\left(k_{1}\Delta u^{2}+k_{2}\Delta v^{2}\right)\boldsymbol n\left(P\right)+o\left(\Delta u^{2}+\Delta v^{2}\right).
+$$
 
 ## 命题 3.5.9 (曲面的二阶近似)
 
@@ -228,7 +266,7 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 ## 定义 3.6.1 (旋转面)
 
-设 $x^{2}Ox^{3}$ 平面内的正则曲线 $\left(f\left(u\right),g\left(u\right)\right)$ ($f>0$) 绕 $Ox^{3}$ 轴旋转, 所得曲面 $\boldsymbol r\left(u,v\right)=\left(f\left(u\right)\cos v,f\left(u\right)\sin v,g\left(u\right)\right)$ 称为旋转面; 取 $f\left(t\right)=t$, $g\left(t\right)=\varphi\left(t\right)$ 时写成图形式 $\boldsymbol r\left(t,\theta\right)=\left(t\cos\theta,t\sin\theta,\varphi\left(t\right)\right)$.
+设 $x^{2}Ox^{3}$ 平面内的正则曲线 $\left(f\left(u\right),g\left(u\right)\right)$ ($f> 0$) 绕 $Ox^{3}$ 轴旋转, 所得曲面 $\boldsymbol r\left(u,v\right)=\left(f\left(u\right)\cos v,f\left(u\right)\sin v,g\left(u\right)\right)$ 称为旋转面; 取 $f\left(t\right)=t$, $g\left(t\right)=\varphi\left(t\right)$ 时写成图形式 $\boldsymbol r\left(t,\theta\right)=\left(t\cos\theta,t\sin\theta,\varphi\left(t\right)\right)$.
 
 ## 定义 3.6.1 (曲率线)
 
@@ -240,7 +278,7 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 ## 命题 3.6.3 (常高斯曲率的旋转曲面)
 
-当选取 $u$ 为母线 $\left(f\left(u\right),g\left(u\right)\right)$ 的弧长参数时, 旋转面的高斯曲率 $K=-\frac{f''}{f}$. 于是: 当 $K>0$ 时曲面是球面; 当 $K=0$ 时曲面是圆柱面、平面或圆锥面; 当 $K<0$ 时曲面称为伪球面, 由 $\frac1{1+g'^{2}}=C+\left(x^{2}\right)^{2}$ 确定.
+当选取 $u$ 为母线 $\left(f\left(u\right),g\left(u\right)\right)$ 的弧长参数时, 旋转面的高斯曲率 $K=-\frac{f''}{f}$. 于是: 当 $K> 0$ 时曲面是球面; 当 $K=0$ 时曲面是圆柱面、平面或圆锥面; 当 $K<0$ 时曲面称为伪球面, 由 $\frac1{1+g'^{2}}=C+\left(x^{2}\right)^{2}$ 确定.
 
 ## 定义 3.6.4 (直纹面与直母线)
 
@@ -296,7 +334,19 @@ $\Gamma^{\gamma}{}_{\alpha\beta}=\frac1{2}g^{\gamma\varepsilon}\left(\partial_{\
 
 ## 命题 4.3.1 (高斯方程与科达齐方程)
 
-由自然标架的二阶混合偏导可交换, 运动方程给出高斯方程 $\partial_{\gamma}\Gamma^{\delta}{}_{\alpha\beta}-\partial_{\beta}\Gamma^{\delta}{}_{\alpha\gamma}+\Gamma^{\varepsilon}{}_{\alpha\beta}\Gamma^{\delta}{}_{\varepsilon\gamma}-\Gamma^{\varepsilon}{}_{\alpha\gamma}\Gamma^{\delta}{}_{\varepsilon\beta}-b_{\alpha\beta}b^{\delta}{}_{\gamma}+b_{\alpha\gamma}b^{\delta}{}_{\beta}=0$ 与科达齐方程 $\partial_{\gamma}b_{\alpha\beta}-\partial_{\beta}b_{\alpha\gamma}+\Gamma^{\varepsilon}{}_{\alpha\beta}b_{\varepsilon\gamma}-\Gamma^{\varepsilon}{}_{\alpha\gamma}b_{\varepsilon\beta}=0$, 二者合称高斯-科达齐方程组, 即曲面的结构方程.
+由自然标架的二阶混合偏导可交换, 运动方程给出高斯方程
+
+$$
+\partial_{\gamma}\Gamma^{\delta}{}_{\alpha\beta}-\partial_{\beta}\Gamma^{\delta}{}_{\alpha\gamma}+\Gamma^{\varepsilon}{}_{\alpha\beta}\Gamma^{\delta}{}_{\varepsilon\gamma}-\Gamma^{\varepsilon}{}_{\alpha\gamma}\Gamma^{\delta}{}_{\varepsilon\beta}-b_{\alpha\beta}b^{\delta}{}_{\gamma}+b_{\alpha\gamma}b^{\delta}{}_{\beta}=0
+$$
+
+与科达齐方程
+
+$$
+\partial_{\gamma}b_{\alpha\beta}-\partial_{\beta}b_{\alpha\gamma}+\Gamma^{\varepsilon}{}_{\alpha\beta}b_{\varepsilon\gamma}-\Gamma^{\varepsilon}{}_{\alpha\gamma}b_{\varepsilon\beta}=0,
+$$
+
+二者合称高斯-科达齐方程组, 即曲面的结构方程.
 
 ## 定理 4.3.2 (曲面的基本定理)
 
@@ -312,7 +362,13 @@ $\Gamma^{\gamma}{}_{\alpha\beta}=\frac1{2}g^{\gamma\varepsilon}\left(\partial_{\
 
 ## 命题 5.1.2 (曲面上曲线的二阶分解)
 
-曲面上的曲线满足 $\ddot{\boldsymbol c}\left(s\right)=\left(\ddot u^{\alpha}+\Gamma^{\alpha}{}_{\varepsilon\tau}\dot u^{\varepsilon}\dot u^{\tau}\right)\boldsymbol r_{\alpha}+b_{\varepsilon\tau}\dot u^{\varepsilon}\dot u^{\tau}\,\boldsymbol n$, 即 $\ddot{\boldsymbol c}$ 分解为测地曲率向量 (切向部分) 与法曲率向量 (法向部分), 且 $\kappa=\left|\ddot{\boldsymbol c}\right|=\sqrt{k_{g}^{2}+k_{n}^{2}}$.
+曲面上的曲线满足
+
+$$
+\ddot{\boldsymbol c}\left(s\right)=\left(\ddot u^{\alpha}+\Gamma^{\alpha}{}_{\varepsilon\tau}\dot u^{\varepsilon}\dot u^{\tau}\right)\boldsymbol r_{\alpha}+b_{\varepsilon\tau}\dot u^{\varepsilon}\dot u^{\tau}\,\boldsymbol n,
+$$
+
+即 $\ddot{\boldsymbol c}$ 分解为测地曲率向量 (切向部分) 与法曲率向量 (法向部分), 且 $\kappa=\left|\ddot{\boldsymbol c}\right|=\sqrt{k_{g}^{2}+k_{n}^{2}}$.
 
 ## 定义 5.1.3 (测地线)
 
@@ -324,7 +380,13 @@ $\Gamma^{\gamma}{}_{\alpha\beta}=\frac1{2}g^{\gamma\varepsilon}\left(\partial_{\
 
 ## 命题 5.1.5 (正交参数网下的测地曲率)
 
-在正交参数网 $I=g_{11}\left(\mathrm du^{1}\right)^{2}+g_{22}\left(\mathrm du^{2}\right)^{2}$ 下, 若曲线单位切向量与 $\boldsymbol e_{1}$ 的夹角为 $\theta$, 则测地曲率 $k_{g}=\theta'\left(s\right)-\frac{\partial_{2}g_{11}}{2g_{11}\sqrt{g_{22}}}\cos\theta+\frac{\partial_{1}g_{22}}{2g_{22}\sqrt{g_{11}}}\sin\theta$ (刘维尔公式).
+在正交参数网 $I=g_{11}\left(\mathrm du^{1}\right)^{2}+g_{22}\left(\mathrm du^{2}\right)^{2}$ 下, 若曲线单位切向量与 $\boldsymbol e_{1}$ 的夹角为 $\theta$, 则测地曲率
+
+$$
+k_{g}=\theta'\left(s\right)-\frac{\partial_{2}g_{11}}{2g_{11}\sqrt{g_{22}}}\cos\theta+\frac{\partial_{1}g_{22}}{2g_{22}\sqrt{g_{11}}}\sin\theta
+$$
+
+(刘维尔公式).
 
 ## 推论 5.1.6 (正交参数网下的测地线方程)
 
@@ -360,7 +422,7 @@ $\Gamma^{\gamma}{}_{\alpha\beta}=\frac1{2}g^{\gamma\varepsilon}\left(\partial_{\
 
 ## 定义 6.2.1 (凸曲线)
 
-平面简单闭曲线的曲率 $k>0$ 时称为凸曲线.
+平面简单闭曲线的曲率 $k> 0$ 时称为凸曲线.
 
 ## 定理 6.2.1 (凸曲线的高斯映射)
 
@@ -388,11 +450,21 @@ $\mathbb E^{3}$ 中平均曲率处处恒为零的曲面称为极小曲面.
 
 ## 公式 10.1.2 (函数图的几何量)
 
-对函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$, 记 $p=f_x$, $q=f_y$, $r=f_{xx}$, $s=f_{xy}$, $t=f_{yy}$, $W=\left|\boldsymbol r_x\wedge\boldsymbol r_y\right|=\sqrt{1+p^{2}+q^{2}}$, 则第一基本形式 $\mathrm I=\left(1+p^{2}\right)\mathrm dx^{2}+2pq\,\mathrm dx\,\mathrm dy+\left(1+q^{2}\right)\mathrm dy^{2}$, 单位法向 $\boldsymbol e_3=\frac1W\left(-p,-q,1\right)$, 第二基本形式 $\mathrm{II}=\frac{r\,\mathrm dx^{2}+2s\,\mathrm dx\,\mathrm dy+t\,\mathrm dy^{2}}{W}$, 平均曲率 $H=\frac{\left(1+q^{2}\right)r-2pqs+\left(1+p^{2}\right)t}{2W^{3}}$.
+对函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$, 记 $p=f_x$, $q=f_y$, $r=f_{xx}$, $s=f_{xy}$, $t=f_{yy}$, $W=\left|\boldsymbol r_x\wedge\boldsymbol r_y\right|=\sqrt{1+p^{2}+q^{2}}$, 则第一基本形式
+
+$$
+\mathrm I=\left(1+p^{2}\right)\mathrm dx^{2}+2pq\,\mathrm dx\,\mathrm dy+\left(1+q^{2}\right)\mathrm dy^{2}$, 单位法向 $\boldsymbol e_3=\frac1W\left(-p,-q,1\right),
+$$
+
+第二基本形式 $\mathrm{II}=\frac{r\,\mathrm dx^{2}+2s\,\mathrm dx\,\mathrm dy+t\,\mathrm dy^{2}}{W}$, 平均曲率 $H=\frac{\left(1+q^{2}\right)r-2pqs+\left(1+p^{2}\right)t}{2W^{3}}$.
 
 ## 定理 10.1.3 (极小曲面方程)
 
-函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$ 是极小曲面当且仅当 $\left(1+f_y^{2}\right)f_{xx}-2f_xf_yf_{xy}+\left(1+f_x^{2}\right)f_{yy}=0$.
+函数图 $\boldsymbol r\left(x,y\right)=\left(x,y,f\left(x,y\right)\right)$ 是极小曲面当且仅当
+
+$$
+\left(1+f_y^{2}\right)f_{xx}-2f_xf_yf_{xy}+\left(1+f_x^{2}\right)f_{yy}=0.
+$$
 
 ## 例 10.1.3 (谢尔克曲面)
 
@@ -416,7 +488,13 @@ $\mathbb E^{3}$ 中平均曲率处处恒为零的曲面称为极小曲面.
 
 ## 讲义: 引理 17.2 (闭半球中的切线像)
 
-对正则闭曲线 $\boldsymbol r$, 若其切线像 $\boldsymbol r^{*}\subset H_{+}\left(\boldsymbol n_{0}\right):=\left\{\boldsymbol x\in S^{2}\left(1\right):\left\langle\boldsymbol x,\boldsymbol n_{0}\right\rangle\ge0\right\}$, 则 $\boldsymbol r^{*}$ 包含于赤道 $\partial H_{+}\left(\boldsymbol n_{0}\right)$.
+对正则闭曲线 $\boldsymbol r$, 若其切线像
+
+$$
+\boldsymbol r^{*}\subset H_{+}\left(\boldsymbol n_{0}\right):=\left\{\boldsymbol x\in S^{2}\left(1\right):\left\langle\boldsymbol x,\boldsymbol n_{0}\right\rangle\ge0\right\},
+$$
+
+则 $\boldsymbol r^{*}$ 包含于赤道 $\partial H_{+}\left(\boldsymbol n_{0}\right)$.
 
 ## 讲义: 引理 17.3 (大圆与切线像相交)
 
