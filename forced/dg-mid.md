@@ -28,7 +28,7 @@
 
 ## 命题 2.2.4 (弧长参数的判别)
 
-在曲线 $\boldsymbol r$ 的所有同定向参数中, 使曲线速度为 $1$ 的参数是惟一的, 即弧长参数; 故参数 $t$ 是弧长参数当且仅当 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm dt}\right|\equiv1$.
+在曲线 $\boldsymbol r$ 的所有同定向参数中, 使曲线速度为 $1$ 的参数是唯一的, 即弧长参数; 故参数 $t$ 是弧长参数当且仅当 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm dt}\right|\equiv1$.
 
 ## 定义 2.3.1 (法平面)
 
@@ -38,7 +38,7 @@
 
 对弧长参数空间曲线 $\boldsymbol r\left(s\right)$, 记曲率 $k\left(s\right)=\left|\dot{\boldsymbol t}\left(s\right)\right|$; 当 $k0$ 时主法向量 $\boldsymbol n=\dot{\boldsymbol t}/k$, 副法向量 $\boldsymbol b=\boldsymbol t\wedge\boldsymbol n$, $\left[\boldsymbol r;\boldsymbol t,\boldsymbol n,\boldsymbol b\right]$ 是弗勒内标架; 挠率 $\tau=\left\langle\dot{\boldsymbol n},\boldsymbol b\right\rangle$.
 
-## 定理 2.3.1 (挠率为零⟺平面曲线)
+## 定理 2.3.1 (挠率为零 $\Leftrightarrow$ 平面曲线)
 
 设空间曲线 $\boldsymbol r$ 的曲率 $k> 0$, 则 $\boldsymbol r$ 落在某个平面上的充要条件是 $\tau\equiv0$.
 
@@ -98,7 +98,7 @@ $\mathbb E^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 ## 定理 2.4.4 (平面曲线基本定理)
 
-设 $k\left(s\right)$ 是连续可微函数, 则 (1) 存在平面 $E^2$ 的曲线 $\boldsymbol r\left(s\right)$, 它以 $s$ 为弧长参数、以 $k\left(s\right)$ 为曲率; (2) 上述曲线在相差平面的一个刚体运动的意义下是惟一的.
+设 $k\left(s\right)$ 是连续可微函数, 则 (1) 存在平面 $E^2$ 的曲线 $\boldsymbol r\left(s\right)$, 它以 $s$ 为弧长参数、以 $k\left(s\right)$ 为曲率; (2) 上述曲线在相差平面的一个刚体运动的意义下是唯一的.
 
 ## 例 2.4.5 (曲率挠率均为常数的曲线分类)
 
