@@ -118,7 +118,7 @@ $\boldsymbol r_{u}\left(a,b\right)$ 和 $\boldsymbol r_{v}\left(a,b\right)$ 张�
 
 ## 推导 3.1.2 (参数变换下法向)
 
-设 $\left(u,v\right)\to\left(\widetilde u,\widetilde v\right)$ 是参数变换, 雅可比行列式 $J:=\frac{\partial\left(u,v\right)}{\partial\left(\widetilde u,\widetilde v\right)}$, 则 $\boldsymbol r_{\widetilde u}\wedge\boldsymbol r_{\widetilde v}=\det J\,\boldsymbol r_u\wedge\boldsymbol r_v$; 因而同向参数变换 ($\det J0$) 不改变单位法向 $\boldsymbol n$, 反向参数变换 ($\det J< 0$) 使 $\boldsymbol n$ 变号.
+设 $\left(u,v\right)\to\left(\widetilde u,\widetilde v\right)$ 是参数变换, 雅可比行列式 $J:=\frac{\partial\left(u,v\right)}{\partial\left(\widetilde u,\widetilde v\right)}$, 则 $\boldsymbol r_{\widetilde u}\wedge\boldsymbol r_{\widetilde v}=\det J\,\boldsymbol r_u\wedge\boldsymbol r_v$; 因而同向参数变换 ($\det J> 0$) 不改变单位法向 $\boldsymbol n$, 反向参数变换 ($\det J< 0$) 使 $\boldsymbol n$ 变号.
 
 ## 定义 3.1.3 (单位法向量)
 
@@ -166,7 +166,7 @@ $$
 
 ## 性质 3.3.2 (第二基本形式在参数变换下的变化)
 
-设 $\left(u,v\right)$ 与 $\left(\bar u,\bar v\right)$ 是曲面 $S$ 的两个不同参数表示. 当参数变换是同向时, 第二基本形式不变, 即 $\widetilde{II}=II$; 当参数变换是反向时, 第二基本形式改变符号, 即 $\widetilde{II}=-II$.
+设 $\left(u,v\right)$ 与 $\left(\overline u,\overline v\right)$ 是曲面 $S$ 的两个不同参数表示. 当参数变换是同向时, 第二基本形式不变, 即 $\widetilde{II}=II$; 当参数变换是反向时, 第二基本形式改变符号, 即 $\widetilde{II}=-II$.
 
 ## 定义 3.4.1 (法曲率)
 
@@ -406,7 +406,7 @@ $$
 
 ## 引理 6.1.2 (方向角的连续分支)
 
-设 $\bar\theta\left(s\right)$ 是单位切向量与 $x$ 轴的方向角, 则存在连续函数 $\theta\left(s\right)$ 使得 $\theta\left(s\right)\equiv\bar\theta\left(s\right)\left(\bmod 2\pi\right)$, $\forall s\in\left[0,l\right]$, 且这样的连续函数在 $\bmod 2\pi$ 意义下唯一.
+设 $\overline\theta\left(s\right)$ 是单位切向量与 $x$ 轴的方向角, 则存在连续函数 $\theta\left(s\right)$ 使得 $\theta\left(s\right)\equiv\overline\theta\left(s\right)\left(\bmod 2\pi\right)$, $\forall s\in\left[0,l\right]$, 且这样的连续函数在 $\bmod 2\pi$ 意义下唯一.
 
 ## 命题 6.1.2 (曲率与方向角)
 
