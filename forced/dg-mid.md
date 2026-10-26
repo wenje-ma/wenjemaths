@@ -10,7 +10,7 @@
 
 ## 定义 2.2.1 (弧长与弧长参数)
 
-曲线 $\boldsymbol r\left(t\right)$, $t\in\left[c,d\right]$, 的弧长为 $\int_c^d\left|\boldsymbol r'\left(t\right)\right|\mathrm dt$; 弧长函数 $s\left(t\right)=\int_c^t\left|\boldsymbol r'\left(u\right)\right|\mathrm du$ 严格单调, 可把参数换为弧长参数 $s$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$; 反之, 若参数 $t$ 满足 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm dt}\right|\equiv1$, 则 $t$ 是弧长参数.
+曲线 $\boldsymbol r\left(t\right)$, $t\in\left[c,d\right]$, 的弧长为 $\int_c^d\left|\boldsymbol r'\left(t\right)\right|\mathrm dt$; 弧长函数 $s\left(t\right)=\int_c^\top\left|\boldsymbol r'\left(u\right)\right|\mathrm du$ 严格单调, 可把参数换为弧长参数 $s$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$; 反之, 若参数 $t$ 满足 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm dt}\right|\equiv1$, 则 $t$ 是弧长参数.
 
 ## 定义 2.2.2 (平面曲线的曲率与弗勒内标架)
 
@@ -24,7 +24,7 @@
 
 ## 定义 2.2.3 (弧长参数化)
 
-固定起点 $a$, 定义 $s\left(t\right):=\int_a^t\left|\boldsymbol r'\left(u\right)\right|\,\mathrm du$; 因 $s'\left(t\right)=\left|\boldsymbol r'\left(t\right)\right|> 0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol r\left(s\right):=\boldsymbol r\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$.
+固定起点 $a$, 定义 $s\left(t\right):=\int_a^\top\left|\boldsymbol r'\left(u\right)\right|\,\mathrm du$; 因 $s'\left(t\right)=\left|\boldsymbol r'\left(t\right)\right|> 0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol r\left(s\right):=\boldsymbol r\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$.
 
 ## 命题 2.2.4 (弧长参数的判别)
 
