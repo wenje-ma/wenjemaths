@@ -27,3 +27,5 @@
 *.synctex*
 *.pyg
 *-blx.bib
+*.qmd
+*.pdf
