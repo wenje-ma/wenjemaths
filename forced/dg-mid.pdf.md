@@ -26,8 +26,6 @@ format:
     toc: false
     title-block-style: none
     keep-md: true
----
-
 **1.3.2 合同变换**: $T\left(\boldsymbol x\right)=\boldsymbol xT+P,\ T\in O\left(n\right),\ P\in\mathbb E^n$; $\det T=1$ 刚体运动, $\det T=-1$ 反向刚体运动.
 
 **2.2.1 弧长与弧长参数**: $s\left(t\right)=\int_c^d\left|\boldsymbol r'\left(t\right)\right|\,\mathrm dt$; $\left|\frac{\mathrm d\boldsymbol r}{\mathrm ds}\right|\equiv1$ 的 $s$ 即弧长参数; $\left|\frac{\mathrm d\boldsymbol r}{\mathrm dt}\right|\equiv1 \Leftrightarrow t$ 是弧长参数.
