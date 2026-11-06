@@ -14,7 +14,7 @@
 
 **定义 2.2.1 (弧长与弧长参数)**
 
-设 $\left[c,d\right]\subset\left(a,b\right)$, 曲线 $\boldsymbol{r}\left(t\right)$ 在 $t=c$ 到 $t=d$ 之间那段的弧长为 $\int_c^d\left|\boldsymbol{r}'\left(t\right)\right|\,\mathrm{d}t$; 弧长函数 $s\left(t\right)=\int_c^\top\left|\boldsymbol{r}'\left(u\right)\right|\mathrm{d}u$ 严格单调, 可把参数换为弧长参数 $s$, 此时 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s}\right|\equiv1$, 单位切向量 $\boldsymbol{t}=\dot{\boldsymbol{r}}$; 反之, 若参数 $t$ 满足 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t}\right|\equiv1$, 则 $t$ 是弧长参数.
+设 $\left[c,d\right]\subset\left(a,b\right)$, 曲线 $\boldsymbol{r}\left(t\right)$ 在 $t=c$ 到 $t=d$ 之间那段的弧长为 $\int_c^d\left|\boldsymbol{r}'\left(t\right)\right|\,\mathrm{d}t$; 弧长函数 $s\left(t\right)=\int_c^{\top}\left|\boldsymbol{r}'\left(u\right)\right|\mathrm{d}u$ 严格单调, 可把参数换为弧长参数 $s$, 此时 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s}\right|\equiv1$, 单位切向量 $\boldsymbol{t}=\dot{\boldsymbol{r}}$; 反之, 若参数 $t$ 满足 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t}\right|\equiv1$, 则 $t$ 是弧长参数.
 
 **定义 2.2.2 (平面曲线的弗雷内标架)**
 
@@ -30,7 +30,7 @@
 
 **定义 2.2.3 (弧长参数化)**
 
-固定起点 $a$, 定义 $s\left(t\right):=\int_a^\top\left|\boldsymbol{r}'\left(u\right)\right|\,\mathrm{d}u$; 因 $s'\left(t\right)=\left|\boldsymbol{r}'\left(t\right)\right|>0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol{r}\left(s\right):=\boldsymbol{r}\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s}\right|\equiv1$.
+固定起点 $a$, 定义 $s\left(t\right):=\int_a^{\top}\left|\boldsymbol{r}'\left(u\right)\right|\,\mathrm{d}u$; 因 $s'\left(t\right)=\left|\boldsymbol{r}'\left(t\right)\right|>0$, $s$ 是 $t$ 的严格单调增函数, 故 $t$ 可反解为 $t=t\left(s\right)$, 得到弧长参数化 $\boldsymbol{r}\left(s\right):=\boldsymbol{r}\left(t\left(s\right)\right)$, 此时 $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s}\right|\equiv1$.
 
 **命题 2.2.4 (弧长参数的判别)**
 
