@@ -89,7 +89,7 @@ $f,g\in\mathfrak{G}$ 等价是指 $f\overset{m}=g$, 仍以 $f$ 表示 $f$ 在 $\
 设 $R_n$ 都是内积空间,
 
 $$
-R=\left\{\left\{x_n\right\}:x_n\in{R}_n,\,\sum_n\left\|x_n\right\|^2<\infty\right\}
+R=\left\{\left\{x_n\right\}:x_n\in{R}_n,\sum_n\left\|x_n\right\|^2<\infty\right\}
 $$
 
 按 $\left\langle\left\{x_n\right\},\left\{y_n\right\}\right\rangle=\sum_n\left\langle{x}_n,y_n\right\rangle$ 成为内积空间; 若每个 $R_n$ 是希尔伯特空间, 则 $R$ 也是希尔伯特空间.
@@ -148,7 +148,7 @@ $$
 
 令 $H_n\left(t\right)=\left(-1\right)^n\mathrm{e}^{t^2}\frac{\mathrm{d}^n}{\mathrm{d}t^n}\mathrm{e}^{-t^2}$ 为埃尔米特多项式, 则加权多项式族 $\psi_n\left(t\right)=\left(2^nn!\sqrt\pi\right)^{-1/2}\mathrm{e}^{-t^2/2}H_n\left(t\right)$ 组成 $L^2\left(\mathbb{R},\mathrm{e}^{-t^2}\mathrm{d}t\right)$ 中的完备标准正交系; 特别地, 多项式族关于权 $\mathrm{e}^{-t^2}$ 正交且完备.
 
-## 定义 1.4.1 (内点、内部与开集)
+## 定义 1.4.1 (内点, 内部与开集)
 
 设 $A$ 是度量空间 $\left(X,d\right)$ 的点集, $x_0\in{A}$. 若存在 $r>0$ 使 $\left\{x:d\left(x,x_0\right)<{}r\right\}\subset{A}$, 则称 $x_0$ 是 $A$ 的内点; $A$ 的内点全体称为 $A$ 的内部; 若 $A$ 中每点都是内点, 则称 $A$ 是开集.
 
@@ -182,7 +182,7 @@ $$
 
 ## 注 1.4.1 ($L^p\left(\mathbb{R}^n\right)$ 中的稠密子集)
 
-类似地, 可得 $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体、阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集.
+类似地, 可得 $L^p\left(\mathbb{R}^n\right)$ ($1\le{p}<\infty$) 中的简单函数全体, 阶梯函数全体以及 $C_c^\infty\left(\mathbb{R}^n\right)$ 均是稠密子集.
 
 ## 定理 1.4.2 (有限维的赋范线性空间是完备的)
 
@@ -198,7 +198,7 @@ $$
 
 度量空间中闭球 $B\left(x_0,r\right)=\left\{x:d\left(x,x_0\right)\le{r}\right\}$ 是闭集.
 
-## 定义 1.4.3 (极限点、导集、闭包与闭集)
+## 定义 1.4.3 (极限点, 导集, 闭包与闭集)
 
 (i) 若存在异于 $x_0$ 的点列 $x_n\to{x}_0$, 则 $x_0$ 是 $A$ 的极限点;
 
@@ -224,7 +224,7 @@ $$
 
 ## 例 1.4.6 ($L^p$ 中的稠密子集)
 
-对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le{p}<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体、阶梯函数全体、$C_c^\infty\left(a,b\right)$、$C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
+对直线上有界闭区间 $\left[a,b\right]$ 及 $1\le{p}<\infty$, $L^p\left[a,b\right]$ 中的简单函数全体, 阶梯函数全体, $C_c^\infty\left(a,b\right)$, $C\left[a,b\right]$ 以及多项式全体 $P$ 均是 $L^p\left[a,b\right]$ 的稠密子集.
 
 ## 定义 1.4.7 (完备性)
 

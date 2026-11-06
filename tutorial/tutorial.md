@@ -4,13 +4,13 @@
 
 ### 我的 GitHub 主页
 
-1. 打开你电脑上的浏览器（Chrome、Edge 都行）。
+1. 打开你电脑上的浏览器（Chrome, Edge 都行）。
 2. 在**地址栏**（浏览器最上方输网址的地方）输入 `https://github.com/wenje-ma`，按回车。
 3. 你应该能看到我的个人主页：
 
 ![github-overview](figures/github-overview.png)
 
-页面上能看到我的 Overview、Repositories、Stars 等。右上角可以搜索，也可以直接点 `Repositories` 查看全部公开仓库。
+页面上能看到我的 Overview, Repositories, Stars 等。右上角可以搜索，也可以直接点 `Repositories` 查看全部公开仓库。
 
 ### 我的收藏（Stars）
 

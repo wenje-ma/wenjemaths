@@ -26,7 +26,7 @@ format:
     toc: false
     title-block-style: none
     keep-md: true
-**1.3.2 合同变换**: $T\left(\boldsymbol{x}\right)=\boldsymbol{x}T+P,\,T\in{O}\left(n\right),\,P\in\mathbb{E}^n$; $\det{T}=1$ 刚体运动, $\det{T}=-1$ 反向刚体运动.
+**1.3.2 合同变换**: $T\left(\boldsymbol{x}\right)=\boldsymbol{x}T+P,T\in{O}\left(n\right),P\in\mathbb{E}^n$; $\det{T}=1$ 刚体运动, $\det{T}=-1$ 反向刚体运动.
 
 **2.2.1 弧长与弧长参数**: $s\left(t\right)=\int_c^d\left|\boldsymbol{r}'\left(t\right)\right|\,\mathrm{d}t$; $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}s}\right|\equiv1$ 的 $s$ 即弧长参数; $\left|\frac{\mathrm{d}\boldsymbol{r}}{\mathrm{d}t}\right|\equiv1\Leftrightarrow{t}$ 是弧长参数.
 
@@ -68,7 +68,7 @@ format:
 
 **3.5.1 曲率线网参数**: 非脐点存在使 $I,II$ 对角; 参数曲线是曲率线 $\Leftrightarrow{g}_{12}=b_{12}=0$ (习题 3.6.29).
 
-**3.5.2 主方向坐标**: $\boldsymbol{r}_u\left(P\right)=\boldsymbol{e}_1,\,\boldsymbol{r}_v\left(P\right)=\boldsymbol{e}_2$; 则 $L\left(P\right)=k_1,\,M\left(P\right)=0,\,N\left(P\right)=k_2$.
+**3.5.2 主方向坐标**: $\boldsymbol{r}_u\left(P\right)=\boldsymbol{e}_1,\boldsymbol{r}_v\left(P\right)=\boldsymbol{e}_2$; 则 $L\left(P\right)=k_1,M\left(P\right)=0,N\left(P\right)=k_2$.
 
 **3.5.2 欧拉公式**: $k_n\left(\boldsymbol{v}\right)=k_1\cos^2\theta+k_2\sin^2\theta$; 推论 $k_1\le{k}_n\left(\boldsymbol{v}\right)\le{k}_2$.
 

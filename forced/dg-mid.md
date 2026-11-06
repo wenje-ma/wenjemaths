@@ -74,7 +74,7 @@ $\left\{\boldsymbol{r}\left(s\right);\boldsymbol{t}\left(s\right),\boldsymbol{n}
 
 **定义 2.3.6 (密切平面)**
 
-弗雷内标架的三根坐标轴分别称为曲线的切线、主法线和副法线; 三个坐标平面分别称为曲线在该点的法平面 (以 $\boldsymbol{t}$ 为法向量)、密切平面 (以 $\boldsymbol{b}$ 为法向量) 和从切平面 (以 $\boldsymbol{n}$ 为法向量).
+弗雷内标架的三根坐标轴分别称为曲线的切线, 主法线和副法线; 三个坐标平面分别称为曲线在该点的法平面 (以 $\boldsymbol{t}$ 为法向量), 密切平面 (以 $\boldsymbol{b}$ 为法向量) 和从切平面 (以 $\boldsymbol{n}$ 为法向量).
 
 **定义 2.3.7 (挠率)**
 
@@ -92,7 +92,7 @@ $\mathbb{E}^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 (1) 设 $\boldsymbol{r}_1,\boldsymbol{r}_2$ 是 $\mathbb{E}^3$ 的两条弧长参数曲线, 定义在同一参数区间上, 且 $\kappa_1=\kappa_2>0$, $\tau_1=\tau_2$, 则存在 $\mathbb{E}^3$ 的一个刚体运动把 $\boldsymbol{r}_2$ 变为 $\boldsymbol{r}_1$;
 
-(2) 设 $k=\kappa\left(s\right)$, $\tau=\tau\left(s\right)$ 是连续可微函数且 $\kappa\left(s\right)>0$, 则存在以 $s$ 为弧长参数、以 $\kappa$ 和 $\tau$ 为曲率和挠率的弧长参数曲线.
+(2) 设 $k=\kappa\left(s\right)$, $\tau=\tau\left(s\right)$ 是连续可微函数且 $\kappa\left(s\right)>0$, 则存在以 $s$ 为弧长参数, 以 $\kappa$ 和 $\tau$ 为曲率和挠率的弧长参数曲线.
 
 **定理 2.4.3 (给定曲率挠率存在弧长参数曲线)**
 
@@ -102,7 +102,7 @@ $\mathbb{E}^{3}$ 中曲线的弧长, 曲率和挠率在刚体运动下不变.
 
 设 $\kappa\left(s\right)$ 是连续可微函数, 则
 
-(1) 存在平面 $E^2$ 的曲线 $\boldsymbol{r}\left(s\right)$, 它以 $s$ 为弧长参数、以 $\kappa\left(s\right)$ 为曲率;
+(1) 存在平面 $E^2$ 的曲线 $\boldsymbol{r}\left(s\right)$, 它以 $s$ 为弧长参数, 以 $\kappa\left(s\right)$ 为曲率;
 
 (2) 上述曲线在相差平面的一个刚体运动的意义下是唯一的.
 
@@ -170,7 +170,7 @@ $\boldsymbol{r}_u,\boldsymbol{r}_v$ 张成的平面 $T_{\boldsymbol{r}}S=\mathrm
 
 设 $\boldsymbol{n}=\frac{\boldsymbol{r}_{u}\wedge\boldsymbol{r}_{v}}{\left|\boldsymbol{r}_{u}\wedge\boldsymbol{r}_{v}\right|}$ 是 $S$ 的单位法向量, $b_{11}=\left\langle\boldsymbol{r}_{uu},\boldsymbol{n}\right\rangle$, $b_{12}=\left\langle\boldsymbol{r}_{uv},\boldsymbol{n}\right\rangle$, $b_{22}=\left\langle\boldsymbol{r}_{vv},\boldsymbol{n}\right\rangle$ (亦记 $L,M,N$), 二次微分式 $II=-\left\langle\mathrm{d}\boldsymbol{r},\mathrm{d}\boldsymbol{n}\right\rangle=b_{11}\,\mathrm{d}u\,\mathrm{d}u+2b_{12}\,\mathrm{d}u\,\mathrm{d}v+b_{22}\,\mathrm{d}v\,\mathrm{d}v=\left\langle\boldsymbol{r}_{\alpha\beta},\boldsymbol{n}\right\rangle\,\mathrm{d}u^{\alpha}\,\mathrm{d}u^{\beta}$ 称为曲面 $S$ 的第二基本形式.
 
-**定义 3.3.1 (椭圆点、双曲点与抛物点)**
+**定义 3.3.1 (椭圆点, 双曲点与抛物点)**
 
 设 $\boldsymbol{r}\left(u_{0}\right)\in{S}$, 主曲率为 $k_{1}\left(u_{0}\right)\le{k}_{2}\left(u_{0}\right)$. 若 $k_{1}k_{2}>0$ (即 $K>0$), 则称 $\boldsymbol{r}\left(u_{0}\right)$ 为椭圆点; 若 $k_{1}k_{2}<0$ (即 $K<0$), 则称其为双曲点; 若 $k_{1}k_{2}=0$ (即 $K=0$), 则称其为抛物点; 特别若 $k_{1}=k_{2}=0$, 则称其为平点.
 
@@ -220,7 +220,7 @@ $\boldsymbol{r}_u,\boldsymbol{r}_v$ 张成的平面 $T_{\boldsymbol{r}}S=\mathrm
 
 **定理 3.5.1 (曲率线网参数)**
 
-在曲面非脐点附近, 存在曲率线网参数 $\left(u^{1},u^{2}\right)$ 使坐标曲线是曲率线; 此时第一、第二基本形式均对角: $I=g_{11}\left(\mathrm{d}u^{1}\right)^{2}+g_{22}\left(\mathrm{d}u^{2}\right)^{2}$, $II=k_{1}\left(\mathrm{d}u^{1}\right)^{2}+k_{2}\left(\mathrm{d}u^{2}\right)^{2}$.
+在曲面非脐点附近, 存在曲率线网参数 $\left(u^{1},u^{2}\right)$ 使坐标曲线是曲率线; 此时第一, 第二基本形式均对角: $I=g_{11}\left(\mathrm{d}u^{1}\right)^{2}+g_{22}\left(\mathrm{d}u^{2}\right)^{2}$, $II=k_{1}\left(\mathrm{d}u^{1}\right)^{2}+k_{2}\left(\mathrm{d}u^{2}\right)^{2}$.
 
 **引理 3.5.2 (主方向坐标)**
 
@@ -242,7 +242,7 @@ $k$ 是主曲率当且仅当它是方程 $\det\left(b_{\alpha\beta}-kg_{\alpha\b
 
 记曲面在点 $P$ 的两个主曲率为 $k_1,k_2$, 则平均曲率 $H=\frac{k_1+k_2}{2}$, 高斯曲率 $K=k_1k_2$; 且 $\boldsymbol{n}_u\wedge\boldsymbol{n}_v=K\,\boldsymbol{r}_u\wedge\boldsymbol{r}_v$. 其中 $k_1k_2=\det\boldsymbol{W}$, $\frac12\left(k_1+k_2\right)=\frac12\operatorname{tr}\boldsymbol{W}$, $\boldsymbol{W}=\begin{bmatrix}g_{11}&g_{12}\\g_{21}&g_{22}\end{bmatrix}^{-1}\begin{bmatrix}b_{11}&b_{12}\\b_{21}&b_{22}\end{bmatrix}$.
 
-**定义 3.5.5 (脐点、圆点与平点)**
+**定义 3.5.5 (脐点, 圆点与平点)**
 
 使主曲率 $k_{1}\left(u\right)=k_{2}\left(u\right)$ 成立的点 $\boldsymbol{r}\left(u\right)$ 称为曲面的脐点; 脐点处公共主曲率 $k\ne0$ 时也称圆点, $k=0$ 即 $b_{\alpha\beta}\equiv0$ 时也称平点.
 
@@ -254,7 +254,7 @@ $k$ 是主曲率当且仅当它是方程 $\det\left(b_{\alpha\beta}-kg_{\alpha\b
 
 $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$ 称为曲面在该点的平均曲率, $K\left(u\right):=k_{1}\left(u\right)k_{2}\left(u\right)$ 称为曲面在该点的总曲率 (高斯曲率).
 
-**命题 3.5.7 (特征方程与平均曲率、总曲率)**
+**命题 3.5.7 (特征方程与平均曲率, 总曲率)**
 
 主曲率 $k_{1},k_{2}$ 是方程 $\det\left(b_{\alpha\beta}-kg_{\alpha\beta}\right)=0$ 的根, 该方程等价于 $k^{2}-2Hk+K=0$.
 
@@ -276,11 +276,11 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 **命题 3.6.2 (旋转面的基本量与主曲率)**
 
-旋转面 $\boldsymbol{r}\left(u,v\right)=\left(f\left(u\right)\cos{v},f\left(u\right)\sin{v},g\left(u\right)\right)$ 的第一、第二基本形式系数为 $g_{11}=\left(f'\right)^{2}+\left(g'\right)^{2}$, $g_{12}=0$, $g_{22}=f^{2}$, $b_{11}=\frac{f'g''-f''g'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, $b_{12}=0$, $b_{22}=\frac{fg'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, 主曲率为 $k_{1}=\frac{b_{11}}{g_{11}}=\frac{f'g''-f''g'}{\left[\left(f'\right)^{2}+\left(g'\right)^{2}\right]^{\frac3{2}}}$, $k_{2}=\frac{b_{22}}{g_{22}}=\frac{g'}{f\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$; 在图形式下第一基本形式 $I=\left(1+\varphi'^{2}\right)\mathrm{d}t^{2}+t^{2}\mathrm{d}\theta^{2}$, 第二基本形式 $II=\frac{\varphi''}{\sqrt{1+\varphi'^{2}}}\mathrm{d}t^{2}+\frac{t\varphi'}{\sqrt{1+\varphi'^{2}}}\mathrm{d}\theta^{2}$ (即 $g_{t\theta}=0$, $b_{t\theta}=0$). (作业中亦编号为公式 3.6.1.)
+旋转面 $\boldsymbol{r}\left(u,v\right)=\left(f\left(u\right)\cos{v},f\left(u\right)\sin{v},g\left(u\right)\right)$ 的第一, 第二基本形式系数为 $g_{11}=\left(f'\right)^{2}+\left(g'\right)^{2}$, $g_{12}=0$, $g_{22}=f^{2}$, $b_{11}=\frac{f'g''-f''g'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, $b_{12}=0$, $b_{22}=\frac{fg'}{\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$, 主曲率为 $k_{1}=\frac{b_{11}}{g_{11}}=\frac{f'g''-f''g'}{\left[\left(f'\right)^{2}+\left(g'\right)^{2}\right]^{\frac3{2}}}$, $k_{2}=\frac{b_{22}}{g_{22}}=\frac{g'}{f\sqrt{\left(f'\right)^{2}+\left(g'\right)^{2}}}$; 在图形式下第一基本形式 $I=\left(1+\varphi'^{2}\right)\mathrm{d}t^{2}+t^{2}\mathrm{d}\theta^{2}$, 第二基本形式 $II=\frac{\varphi''}{\sqrt{1+\varphi'^{2}}}\mathrm{d}t^{2}+\frac{t\varphi'}{\sqrt{1+\varphi'^{2}}}\mathrm{d}\theta^{2}$ (即 $g_{t\theta}=0$, $b_{t\theta}=0$). (作业中亦编号为公式 3.6.1.)
 
 **命题 3.6.3 (常高斯曲率的旋转曲面)**
 
-当选取 $u$ 为母线 $\left(f\left(u\right),g\left(u\right)\right)$ 的弧长参数时, 旋转面的高斯曲率 $K=-\frac{f''}{f}$. 于是: 当 $K>0$ 时曲面是球面; 当 $K=0$ 时曲面是圆柱面、平面或圆锥面; 当 $K<0$ 时曲面称为伪球面, 由 $\frac1{1+g'^{2}}=C+\left(x^{2}\right)^{2}$ 确定; 在图形式下常高斯曲率 $K\equiv{k}$ 等价于 $\frac1{1+\varphi'^{2}}=c-kt^{2}$.
+当选取 $u$ 为母线 $\left(f\left(u\right),g\left(u\right)\right)$ 的弧长参数时, 旋转面的高斯曲率 $K=-\frac{f''}{f}$. 于是: 当 $K>0$ 时曲面是球面; 当 $K=0$ 时曲面是圆柱面, 平面或圆锥面; 当 $K<0$ 时曲面称为伪球面, 由 $\frac1{1+g'^{2}}=C+\left(x^{2}\right)^{2}$ 确定; 在图形式下常高斯曲率 $K\equiv{k}$ 等价于 $\frac1{1+\varphi'^{2}}=c-kt^{2}$.
 
 **定义 3.6.4 (直纹面与直母线)**
 
@@ -290,7 +290,7 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 令旋转面平均曲率 $H\equiv0$, 得 $\frac{\varphi''}{1+\varphi'^{2}}+\frac{\varphi'}{t}=0$, 即 $t\varphi''+\varphi'\left(1+\varphi'^{2}\right)=0$; 取 $c=1$ 时 $\varphi'\left(t\right)=\frac1{\sqrt{t^{2}-1}}$, 积分得 $\varphi\left(t\right)=\ln\left(t+\sqrt{t^{2}-1}\right)=\operatorname{arcosh}t$, 它是悬链线绕轴旋转所得的悬链面.
 
-**例 3.6.5 (柱面、锥面与切线面)**
+**例 3.6.5 (柱面, 锥面与切线面)**
 
 若 $\boldsymbol\ell\left(u\right)$ 为常向量, 直母线互相平行, 曲面是柱面; 若 $\boldsymbol{a}\left(u\right)$ 为常向量, 所有直母线过同一固定点, 曲面是锥面 (即以 $\boldsymbol{a}_0$ 为顶点的锥面); 若 $\boldsymbol\ell\left(u\right)=\frac{\boldsymbol{a}'\left(u\right)}{\left|\boldsymbol{a}'\left(u\right)\right|}$, 直母线沿准线的切线方向, 曲面是切线面. (作业中亦编号为例 6.2, 例 3.6.6.)
 
@@ -310,7 +310,7 @@ $H\left(u\right):=\frac1{2}\left(k_{1}\left(u\right)+k_{2}\left(u\right)\right)$
 
 **定理 3.6.8 (可展曲面的分类)**
 
-可展曲面恰为柱面、锥面和切线面三类.
+可展曲面恰为柱面, 锥面和切线面三类.
 
 **定义 3.6.9 (全脐曲面)**
 
@@ -346,7 +346,7 @@ $\Gamma^{\gamma}{}_{\alpha\beta}=\frac1{2}g^{\gamma\varepsilon}\left(\partial_{\
 
 **定理 4.3.2 (曲面的基本定理)**
 
-设 $\varphi=g_{\alpha\beta}\,\mathrm{d}u^{\alpha}\,\mathrm{d}u^{\beta}$ 和 $\psi=b_{\alpha\beta}\,\mathrm{d}u^{\alpha}\,\mathrm{d}u^{\beta}$ 是参数区域 $D$ 上的两个二次微分式, 其中 $\left(g_{\alpha\beta}\right)$ 对称正定, $\left(b_{\alpha\beta}\right)$ 对称. 则存在曲面 $\boldsymbol{r}:D\to{E}^3$ 以 $\varphi,\psi$ 分别为其第一、第二基本形式, 当且仅当 $\left(g_{\alpha\beta}\right),\left(b_{\alpha\beta}\right)$ 满足高斯-科达齐方程组; 且这样的曲面在 $E^3$ 的刚体运动意义下唯一.
+设 $\varphi=g_{\alpha\beta}\,\mathrm{d}u^{\alpha}\,\mathrm{d}u^{\beta}$ 和 $\psi=b_{\alpha\beta}\,\mathrm{d}u^{\alpha}\,\mathrm{d}u^{\beta}$ 是参数区域 $D$ 上的两个二次微分式, 其中 $\left(g_{\alpha\beta}\right)$ 对称正定, $\left(b_{\alpha\beta}\right)$ 对称. 则存在曲面 $\boldsymbol{r}:D\to{E}^3$ 以 $\varphi,\psi$ 分别为其第一, 第二基本形式, 当且仅当 $\left(g_{\alpha\beta}\right),\left(b_{\alpha\beta}\right)$ 满足高斯-科达齐方程组; 且这样的曲面在 $E^3$ 的刚体运动意义下唯一.
 
 **定理 4.3.3 (高斯绝妙定理)**
 
