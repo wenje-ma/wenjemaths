@@ -32,13 +32,13 @@ Anki 是一个免费的 "记忆卡片" 软件 (开源, 跨平台, 桌面, 安卓
 
 > **正面**: 设 $\left(X,d\right)$ 是度量空间, 证明 $d'\left(x,y\right)=\frac{d\left(x,y\right)}{1+d\left(x,y\right)}$ 也是 $X$ 上的度量.
 
-> **背面**: 记 $\varphi\left(t\right)=\frac{t}{1+t}$, 逐条验证 (i)(ii)(iii)…… (完整证明)
+> **背面**: 记 $\varphi\left(t\right)=\frac{t}{1+t}$, 逐条验证 (i)(ii)(iii)... (完整证明)
 
 在 mdmath 里, 把上面的 Markdown 原文原样贴进 `Front` / `Back` 字段就行, 卡片会自动渲染成公式.
 
 ## 怎么装
 
-**没装过 Anki？** 先去 https://apps.ankiweb.net/ 下载安装 (一路默认即可) , 装完打开.
+**没装过 Anki? ** 先去 https://apps.ankiweb.net/ 下载安装 (一路默认即可) , 装完打开.
 
 接着装插件, 有两个渠道, 任选其一:
 
