@@ -19,10 +19,9 @@
 
 - 系统: Windows 10 或 11, x64, 有管理员权限, 网络能到 `github.com`.
 - 存放根目录: 有 D 盘用 `D:\wenje-ma`, 只有 C 盘用 `C:\wenje-ma`. 全英文, 无空格. 下面的命令用 `$root` 指代它, 每段命令执行前先在当前终端里 `$root = "D:\wenje-ma"` 赋值, 或直接把 `$root` 换成真实路径.
-- 源机器上是 31 个并列目录, 每个目录一个独立仓库, 远端统一 `https://github.com/wenje-ma/<仓库名>.git`, 默认分支一律 `main`.
-- md 总数 954. 其中 25 个公开仓库含 942 个 md, 另外 6 个非公开仓库含 12 个 md, 非公开的克隆不到, 见第 11 节.
-- 公开仓库总体积约 2.0 GB (服务端口径), 单仓库体积见第 11 节.
-- 954 个 md 全部 UTF-8 无 BOM, 行尾 CRLF. 公式只有 `$...$` 与 `$$...$$` 两种, 表格是标准 GFM, 没有 mermaid 与自定义容器.
+- 每个仓库是独立的 git 仓库, 远端统一 `https://github.com/wenje-ma/<仓库名>.git`, 默认分支一律 `main`.
+- 可以匿名克隆的公开仓库共 25 个, 合计 942 个 md.
+- 这 942 个 md 全部 UTF-8 无 BOM, 行尾 CRLF. 公式只有 `$...$` 与 `$$...$$` 两种, 表格是标准 GFM, 没有 mermaid 与自定义容器.
 - 目录惯例: `<仓库>\homework-cn\weekN.md` 中文习题, `homework-en\weekN.md` 英文版, `textbooks\` 教材与讲课稿, 部分仓库另有 `figures\`, `codes\`, `tex\`.
 - 参考库: `wenjemaths\forced\` 是条目库, 术语与符号口径以它为准.
 
@@ -37,7 +36,7 @@
 
 判据: 页面显示用户名, 右上角有头像.
 
-说明: 本仓库群的公开仓库匿名就能克隆, 账号不是克隆的前提, 注册的用途是访问非公开仓库, 提 issue, 加星.
+说明: 公开仓库匿名就能克隆, 账号不是克隆的前提, 注册的用途是登录后访问需要授权的仓库, 提 issue, 加星.
 
 失败分支: 页面超时或打不开 → 换网络后重试, 不要用第三方代注册服务; 收不到验证码 → 先查垃圾邮件目录, 再核对邮箱是否填错; 用户名占用 → 加数字重试.
 
@@ -122,7 +121,7 @@ git -C "$root\probability" log -1 --format="%h %ad %s"
 
 ### 6.2 换成任意仓库
 
-地址规律只有一条: `https://github.com/wenje-ma/<仓库名>.git`. 仓库名从第 11 节的表里取, 或现取:
+地址规律只有一条: `https://github.com/wenje-ma/<仓库名>.git`. 仓库名现取, 不必另找清单:
 
 ```powershell
 Invoke-RestMethod "https://api.github.com/users/wenje-ma/repos?per_page=100" -Headers @{ "User-Agent" = "curl" } |
@@ -163,7 +162,7 @@ foreach ($r in $list) {
 Get-ChildItem -LiteralPath $root -Directory | ForEach-Object { "$($_.Name) " + (git -C $_.FullName rev-parse --abbrev-ref HEAD 2>$null) }
 ```
 
-体量提醒: `primary-mathematics` 约 714 MB, `junior-mathematics` 约 227 MB, `senior-mathematics` 约 212 MB. 只要大学数学就跳过这三个.
+体量提醒: 有三个仓库单个超过 200 MB, 最大的一个约 714 MB. 按 6.2 的 API 输出看 `size`, 用 `Sort-Object size -Descending` 挑最大的三个跳过即可, 只要大学数学就用不着它们.
 
 ### 6.5 连不上 github.com
 
@@ -188,7 +187,7 @@ code "$root\wenjemaths"
 
 ### 7.2 预览判据
 
-打开 `wenjemaths\forced\dg-mid.md`, 用 MPE 的 `Open Preview to the Side`. 逐项核对:
+打开任意一个含 `$$` 的 md, 用 MPE 的 `Open Preview to the Side`. 逐项核对:
 
 - 行内公式是斜体变量, 下标落在基线以下;
 - 行间公式有分式横线, 矩阵有方括号, 编号靠右;
@@ -197,22 +196,33 @@ code "$root\wenjemaths"
 
 ### 7.3 抽样清单
 
-每个文件验一种语法, 五项都通过可认为整体可用.
+不点名具体文件, 按语法特征各抽一份. 先列出候选:
 
-| 文件 | 验什么 |
-| --- | --- |
-| `wenjemaths\forced\dg-mid.md` | 大量行间公式, 矩阵, 加粗条目名 |
-| `differential-geometry\textbooks\handout\1104.md` | `\mathscr` 等字体宏 |
-| `abstract-algebra\homework-cn\week1.md` | `\substack` 求和下标 |
-| `junior-mathematics\homework-cn\week12.md` | GFM 表格与初等数学 |
-| `wenje-ma\README.md` | shields.io 徽章, 需联网, 离线裂图属正常 |
+```powershell
+Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File |
+  Select-String -Pattern '\$\$' -List -Encoding utf8 |
+  Select-Object -First 5 -ExpandProperty Path
+```
+
+把 `-Pattern` 换成下表的关键词, 就得到对应类型的候选文件. 每个类型抽一份打开预览.
+
+| 抽什么 | 关键词 | 看到什么算过 |
+| --- | --- | --- |
+| 行间公式 | `$$` | 分式有横线, 编号靠右, 不是 `\frac` 原文 |
+| 矩阵 | `begin{bmatrix}` 或 `begin{pmatrix}` | 方括号或圆括号包住, 元素不错位 |
+| 分段函数 | `begin{cases}` | 左侧大括号, 右侧两行对齐 |
+| 表格 | `^\x7c` | 表头与竖线在, 列不塌 |
+| 图片 | `!\[` | 有图就过; 裂图先按第 10 节确认是否为已知例外 |
+| 中文段落 | 任选一个含中文的 | 无方块, 无乱码 |
+
+六类都过, 可认为 942 个 md 整体可读.
 
 ### 7.4 读全文
 
 预览只用于验渲染, 942 个文件不要逐个开预览, 读文本即可.
 
 ```powershell
-Get-Content -LiteralPath "$root\topology\homework-cn\week1.md" -Encoding utf8 -TotalCount 60
+Get-Content -LiteralPath "$root\<仓库>\homework-cn\week1.md" -Encoding utf8 -TotalCount 60
 ```
 
 必须显式写 `-Encoding utf8`: 文件是 UTF-8 无 BOM, PowerShell 5.1 默认按 ANSI 解码会出乱码.
@@ -220,10 +230,10 @@ Get-Content -LiteralPath "$root\topology\homework-cn\week1.md" -Encoding utf8 -T
 按主题检索:
 
 ```powershell
-Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File | Select-String -Pattern "弗雷内" -Encoding utf8
+Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File | Select-String -Pattern "<要检索的词>" -Encoding utf8
 ```
 
-顺序建议: 先读 `wenjemaths\forced\` 建立术语口径, 再按 `<仓库>\homework-cn\weekN.md` 顺读. `textbooks\` 里的 `.pdf` 是教材扫描件, 用 PDF 阅读器打开, 不在 md 渲染范围内.
+顺序建议: 先读含 `forced\` 目录的条目库建立术语口径, 再按 `<仓库>\homework-cn\weekN.md` 顺读. `textbooks\` 里的 `.pdf` 是教材扫描件, 用 PDF 阅读器打开, 不在 md 渲染范围内.
 
 ## 8 可选设置
 
@@ -263,10 +273,9 @@ Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File | Select-String -Pa
 
 - `primary-mathematics\homework-cn\week116.md` 与 `primary-mathematics\homework-en\week116.md`: 有一处写成 `$1$$m$`, 两个行内公式紧贴, 后续内容可能被当成公式块, 该文件渲染异常.
 - `states-python\3-报告\论文.md`: 引用 4 张 `figures\fig_*.png`, 仓库里实际是同名 `.pdf`, 4 张裂图.
-- `social-task\通讯.md`: 引用 `通讯_files\*.png`, 该目录未入库, 6 张裂图; 该仓库本身非公开.
 - `wenje-ma\README.md`: shields.io 徽章需联网.
 - `metropolis\README.md`: 代码块内是整段 LaTeX 源码, 属正常展示.
-- `anki-mdmath` 与 `applied-multivariate-statistics` 无 md, 目录为空属正常.
+- `anki-mdmath` 无 md, 目录为空属正常.
 
 ## 11 边界
 
@@ -281,4 +290,4 @@ Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File | Select-String -Pa
 
 1. 版本: Git 版本号, VSCode 版本号, MPE 版本号.
 2. 数量: 仓库目录数, md 总数, 以及第 6.4 节两条计数命令的原始输出.
-3. 渲染: 第 7.2 节四条判据是否全过, 第 7.3 节五个抽样文件里是否有异常, 有异常就按第 10 节对号入座.
+3. 渲染: 第 7.2 节四条判据是否全过, 第 7.3 节六类抽样是否有异常, 有异常就按第 10 节对号入座.
