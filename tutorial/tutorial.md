@@ -1,202 +1,284 @@
-# 一命速通: 查阅习题集
+# 交接文档: 在本机搭好 wenje-ma 仓库的阅读环境
 
-## 我的仓库
+读者是操作这台电脑的 AI. 按 S1 到 S6 的顺序执行, 每步跑完判据再进下一步, 判据不过就按该步的失败分支处理, 不要凭猜继续. 全程只读: 不改仓库文件, 不 commit, 不 push.
 
-### 我的 GitHub 主页
+## 0 验收标准
 
-1. 打开你电脑上的浏览器 (Chrome, Edge 都行).
-2. 在**地址栏** (浏览器最上方输网址的地方) 输入 `https://github.com/wenje-ma`, 按回车.
-3. 你应该能看到我的个人主页:
+六条全部满足才算交付完成.
 
-![github-overview](figures/github-overview.png)
+| 编号 | 达到的状态 | 判据 | 期望结果 |
+| --- | --- | --- | --- |
+| 1 | GitHub 账号可登录 | 打开 `https://github.com/settings/profile` | 页面显示用户名 |
+| 2 | Git 可用 | `git --version` | `git version 2.x` |
+| 3 | VSCode 可用 | `code --version` | 输出一行版本号 |
+| 4 | MPE 插件已装 | `code --list-extensions` | 含 `shd101wyy.markdown-preview-enhanced` |
+| 5 | 能克隆任意仓库 | `git -C <路径> rev-parse --abbrev-ref HEAD` | `main` |
+| 6 | 全量 md 齐且能渲染 | 第 6.4 节两条计数命令, 加第 7 节抽样预览 | `25` 与 `942`, 公式排版正常 |
 
-页面上能看到我的 Overview, Repositories, Stars 等. 右上角可以搜索, 也可以直接点 `Repositories` 查看全部公开仓库.
+## 1 前提与事实
 
-### 我的收藏 (Stars)
+- 系统: Windows 10 或 11, x64, 有管理员权限, 网络能到 `github.com`.
+- 存放根目录: 有 D 盘用 `D:\wenje-ma`, 只有 C 盘用 `C:\wenje-ma`. 全英文, 无空格. 下面的命令用 `$root` 指代它, 每段命令执行前先在当前终端里 `$root = "D:\wenje-ma"` 赋值, 或直接把 `$root` 换成真实路径.
+- 源机器上是 31 个并列目录, 每个目录一个独立仓库, 远端统一 `https://github.com/wenje-ma/<仓库名>.git`, 默认分支一律 `main`.
+- md 总数 954. 其中 25 个公开仓库含 942 个 md, 另外 6 个非公开仓库含 12 个 md, 非公开的克隆不到, 见第 11 节.
+- 公开仓库总体积约 2.0 GB (服务端口径), 单仓库体积见第 11 节.
+- 954 个 md 全部 UTF-8 无 BOM, 行尾 CRLF. 公式只有 `$...$` 与 `$$...$$` 两种, 表格是标准 GFM, 没有 mermaid 与自定义容器.
+- 目录惯例: `<仓库>\homework-cn\weekN.md` 中文习题, `homework-en\weekN.md` 英文版, `textbooks\` 教材与讲课稿, 部分仓库另有 `figures\`, `codes\`, `tex\`.
+- 参考库: `wenjemaths\forced\` 是条目库, 术语与符号口径以它为准.
 
-在地址栏输入 `https://github.com/wenje-ma?tab=stars`, 按回车, 打开我的 `Stars`, 其中名为 `basic` 的 list 就是数学基础学科仓库集:
+## 2 S1 注册 GitHub 账号
 
-![github-stars](figures/github-stars.png)
+这三项必须由本人完成: 邮箱验证码, 人机验证, 密码. AI 只负责把页面打开并说明要点.
 
-点开任意一个学科仓库 (例如拓扑学 `topology`), 里面一般有:
+1. 打开 `https://github.com/signup`.
+2. 用户名用全小写英文字母加数字, 不要中文和空格.
+3. 邮箱收验证码并填回, 完成人机验证.
+4. 登录后访问 `https://github.com/settings/profile`.
 
-- `cn` 文件夹 — 中文笔记, 核心文件是 `notes.md`;
-- `homework` 文件夹 — 习题集.
+判据: 页面显示用户名, 右上角有头像.
 
-以拓扑学为例, 打开后的页面大致如下:
+说明: 本仓库群的公开仓库匿名就能克隆, 账号不是克隆的前提, 注册的用途是访问非公开仓库, 提 issue, 加星.
 
-![github-topology](figures/github-topology.png)
+失败分支: 页面超时或打不开 → 换网络后重试, 不要用第三方代注册服务; 收不到验证码 → 先查垃圾邮件目录, 再核对邮箱是否填错; 用户名占用 → 加数字重试.
 
-点进 `cn` 文件夹, 再点 `notes.md`, 就能在网页上直接看笔记了 (不过网页端渲染效果一般, 想获得最佳阅读体验, 请看下面的"安装 vscode 与 MPE 插件"一节).
+## 3 S2 安装 Git
 
-## 安装 vscode 与 MPE 插件
-
-### 安装 vscode
-
-1. 打开 `https://code.visualstudio.com/`.
-2. 点页面中间的 **Download for Windows** (macOS 会自动显示 macOS 版, 照页面提示下载即可).
-3. 下载完成后**双击安装包**, 一路点 **下一步/Next** (保持默认设置即可).
-4. 安装完成, 打开 vscode, 出现欢迎页/开始界面就说明装好了.
-
-### 安装 MPE 插件
-
-1. 打开 `vscode`, 点左侧竖排图标里的 **扩展** (四方块那个, 快捷键 `Ctrl+Shift+X`).
-2. 在搜索框输入 `Markdown Preview Enhanced`(简称 MPE).
-3. 点 **Install** 安装, 装完如果提示"重新加载/Reload", 点一下.
-4. 装好之后, 扩展页面会变成 **禁用/卸载/自动更新** 三个按钮 (见下图), 就说明安装成功:
-
-![vscode-MPE](figures/vscode-MPE.png)
-
-装好后, 打开任何一个 `.md` 文件, 右上角会出现预览按钮, 点击即可看到排版好的渲染效果. 我的笔记都是 `markdown` 写的, 用它能获得最好的阅读体验.
-
-## 安装 `git`
-
-`git` 是"克隆"这条命令的引擎, 必须先装好. **安装过程中任何看不懂的选项, 都保持默认, 直接点下一步即可. **
-
-### Windows
-
-1. 打开官网 `https://git-scm.com/download/win`, 下载 Windows 版安装包.
-2. 双击运行安装包, 一路点 **Next** (保持默认设置即可).
-3. 安装完成后, **重新打开**一个终端 (重要), 输入 `git --version` 能看到版本号, 就说明装好了.
-
-> 小技巧:`git` 装好后会自带一个 `Git Bash`(类似 Linux 的终端), 初学者用它最省心, 下面统一用它演示.
-
-### macOS
-
-打开 `https://git-scm.com/download/mac`, 下载 macOS 版安装包 (`.pkg` 文件), 双击安装, 一路"继续"即可.
-
-**会用 Homebrew 的话**, 打开"终端"(`Cmd + 空格` 搜 Terminal) 输入:
-
-```bash
-brew install git
+```powershell
+winget install --id Git.Git -e --source winget --accept-package-agreements --accept-source-agreements
 ```
 
-### Linux (Debian/Ubuntu 系)
+备选: 打开 `https://git-scm.com/download/win` 下载安装包, 全部选项保持默认, PATH 那一页选 `Git from the command line and also from 3rd-party software`.
 
-```bash
-sudo apt update && sudo apt install -y git
+判据: 新开一个终端窗口, 运行 `git --version`, 输出 `git version 2.x`.
+
+失败分支:
+
+- 提示 `不是内部或外部命令` → 终端是安装前开的, 关掉重开; 仍旧 → 确认 `C:\Program Files\Git\cmd` 在 PATH; VSCode 里可另设 `git.path` 指向 `C:\Program Files\Git\cmd\git.exe`.
+- 找不到 winget → 在 Microsoft Store 更新 `应用安装程序`.
+
+可选, 仅提交时需要: `git config --global user.name "名字"` 与 `git config --global user.email "邮箱"`.
+
+## 4 S3 安装 VSCode
+
+```powershell
+winget install --id Microsoft.VisualStudioCode -e --source winget --accept-package-agreements --accept-source-agreements
 ```
 
-### 装完统一验证
+备选: `https://code.visualstudio.com/` 下 User Installer, 安装时保持默认勾选.
 
-```bash
-git --version
+判据: `code --version` 输出一行版本号. 若先出现 `crashpad ... TransactNamedPipe` 之类的报错行, 那是 Windows 下的噪声, 不算失败.
+
+失败分支:
+
+- 提示 `code` 不是命令 → 在 VSCode 里按 `Ctrl+Shift+P` 执行 `Shell Command: Install 'code' command in PATH`; 或用完整路径 `"%LOCALAPPDATA%\Programs\Microsoft VS Code\bin\code.cmd"`.
+- 装到了自定义目录时, 同上, 用实际 `bin\code.cmd` 的路径.
+
+非 Windows: macOS 用 `brew install --cask visual-studio-code`, Linux 用包管理器装 code, 之后 `code` 命令相同, 根目录改成 `~/wenje-ma`.
+
+## 5 S4 安装 MPE 插件
+
+```powershell
+code --install-extension shd101wyy.markdown-preview-enhanced
 ```
 
-只要输出了类似 `git version 2.x.x` 的字样, 就代表安装成功.
+判据: `code --list-extensions --show-versions` 里出现 `shd101wyy.markdown-preview-enhanced@0.8.x`.
 
-**没看到版本号?** 如果提示"不是内部或外部命令" / `command not found`, 说明没装好, 或者终端是安装前打开的. 重新打开一个终端再试一次; 还不行就回到上面重装.
+必要前置: 该插件未声明支持未信任工作区, 在 Restricted Mode 下会被禁用, 表现是按预览没反应或白屏. 两个解法, 任选其一:
 
-## 打开终端
+- 打开文件夹时弹窗问信任, 选 `Yes, I trust the authors`.
+- 把用户设置 `security.workspace.trust.enabled` 改为 `false`.
 
-克隆会把仓库下载到**当前所在目录**, 所以先想好放哪 (建议专门建一个文件夹, 比如 `Github`), 再让终端"定位"到那里. 下面用最不容易出错的方式:
+快捷键注意: `Ctrl+K V` 与 VSCode 自带预览冲突, 可能打开的是自带那个. 要确定用的是 MPE, 走命令面板 `Ctrl+Shift+P` → `Markdown Preview Enhanced: Open Preview to the Side`.
 
-1. 在桌面新建一个文件夹, 命名为 `Github`(名字随意, 别用中文就行).
-2. 打开 `vscode`, 点左上角 **文件 → 打开文件夹**, 选中刚才的 `Github` 文件夹.
-3. 按 `Ctrl + J`(macOS 是 `Cmd + J`) 打开底部终端面板.
-4. 终端里会出现类似 `PS C:\Users\11111\Github> ` 的提示符, 说明已经定位好了 (见下图):
+自测: 新建 `test.md`, 写入下面两行, 用上面的 MPE 命令打开预览.
 
-![vscode-git](figures/vscode-git.png)
-
-> 不确定定位对不对? 在终端里输入 `pwd` 回车, 看输出的路径是不是你的文件夹.
-
-> 更习惯 Git Bash? 在文件夹**空白处右键** → **Open Git Bash here**, 弹出的窗口就是定位好的终端, 效果一样.
-
-## 开始克隆
-
-在终端里输入下面这条命令, 然后回车:
-
-```bash
-git clone https://github.com/wenje-ma/topology
+```markdown
+行内公式 $\frac{1}{2}$, 行间公式:
+$$x^{2}+y^{2}=1$$
 ```
 
-正常情况会输出:
+判据: 预览里是带横线的分式与带上标的公式, 不是 `\frac` 原文. 验证完删掉 `test.md`.
 
-```bash
-Cloning into 'topology'...
-remote: Enumerating objects: 512, done.
-remote: Counting objects: 100% (512/512), done.
-remote: Compressing objects: 100% (394/394), done.
-remote: Total 512 (delta 245), reused 383 (delta 116), pack-reused 0 (from 0)
-Receiving objects: 100% (512/512), 2.02 MiB | 1.31 MiB/s, done.
-Resolving deltas: 100% (245/245), done.
+失败分支: 预览空白 → 按上面的信任两条处理; 公式仍是原文 → 你在看左侧编辑区, 预览窗格未开, 重跑 MPE 命令; 若公式区显示红色报错, 说明 KaTeX 不认某个宏, 把 `markdown-preview-enhanced.mathRenderingOption` 改为 `MathJax` 再开预览, 注意 MathJax 首次渲染要从 CDN 拉脚本, 需联网.
+
+## 6 S5 克隆仓库
+
+### 6.1 单个仓库
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$root" | Out-Null
+git clone --depth 1 "https://github.com/wenje-ma/probability.git" "$root\probability"
 ```
 
-看到 `done.` 就成功了. 回到 vscode, 左侧文件树里应该出现 `topology` 文件夹, 点开就能看到 `cn` 和 `homework`.
+判据三行:
 
-**想克隆其他学科仓库? ** 把命令里的 `topology` 换成任意仓库名即可:
-
-```bash
-git clone https://github.com/wenje-ma/< 仓库名> 
+```powershell
+git -C "$root\probability" rev-parse --abbrev-ref HEAD
+git -C "$root\probability" log -1 --format="%h %ad %s"
+(Get-ChildItem -LiteralPath "$root\probability" -Recurse -Filter *.md -File).Count
 ```
 
-### 克隆失败了?
+期望: `main`, 一行提交信息, `24`.
 
-| 终端里的报错 (关键词) | 原因 | 怎么办 |
-|---|---|---|
-| `unable to access` / `Could not resolve host` / 一直转圈 | 网络连接问题 | 检查网络环境, ***校园网用户可咨询学校提供的网络与学术访问服务*** |
-| `destination path ... already exists` | 这个文件夹之前已经克隆过了 | 不用管, 直接去用现有的; 或换个目录重新克隆 |
-| `Permission denied (publickey)` | 不小心用了 SSH 地址 | 换成 `https://github.com/wenje-ma/仓库名` 这种地址即可 |
-| `不是内部或外部命令` / `command not found` | git 没装好 | 回到"安装 git"重装, 装完**重新打开**终端 |
+### 6.2 换成任意仓库
 
-## 仓库更新了怎么办
+地址规律只有一条: `https://github.com/wenje-ma/<仓库名>.git`. 仓库名从第 11 节的表里取, 或现取:
 
-我可能会更新笔记. 想同步到最新, **不用重新克隆**:
-
-1. 用 vscode 打开克隆下来的 `topology` 文件夹.
-2. 按 `Ctrl + J` 打开终端 (或在该文件夹空白处右键 Git Bash).
-3. 运行:
-
-```bash
-git pull
+```powershell
+Invoke-RestMethod "https://api.github.com/users/wenje-ma/repos?per_page=100" -Headers @{ "User-Agent" = "curl" } |
+  Select-Object name, size, @{ n = 'mb'; e = { [math]::Round($_.size / 1024) } }
 ```
 
-看到 `Already up to date.` 说明已是最新; 看到 `Updating ...` 并自动跑完, 说明更新成功.
+`--depth 1` 只取最新提交, 不含历史, 体积小, 只读够用; 要完整历史就去掉这个参数.
 
-## 进阶: 不用背网址
+### 6.3 更新
 
-`git clone` 什么都好, 唯一的小缺点是要敲一长串网址. GitHub 官方出品的命令行工具 **`gh`(GitHub CLI) **, 能让你只写 `所有者/仓库名` 就够了.
-
-### 安装 gh
-
-打开 `https://cli.github.com/`, 按你的系统下载安装 (Windows 下载 `.msi` 安装包, 双击一路下一步即可), 装完在终端验证:
-
-```bash
-gh --version
+```powershell
+git -C "$root\probability" pull --ff-only
 ```
 
-### 登录一次
+### 6.4 全量克隆
 
-克隆前要先登录 (只需要做这一次):
-
-```bash
-gh auth login
+```powershell
+$root = "D:\wenje-ma"
+$list = Invoke-RestMethod "https://api.github.com/users/wenje-ma/repos?per_page=100" -Headers @{ "User-Agent" = "curl" }
+foreach ($r in $list) {
+  $dst = Join-Path $root $r.name
+  if (Test-Path -LiteralPath $dst) { "skip $($r.name)"; continue }
+  git clone --depth 1 $r.clone_url $dst
+  if ($LASTEXITCODE -ne 0) { "FAILED $($r.name)" }
+}
 ```
 
-按提示操作 (只需回车和选数字):
-1. 问 `What account do you want to use?` → 选 `GitHub.com`, 回车;
-2. 问 `What protocol do you want to use?` → 选 `HTTPS`(默认就是它), 回车;
-3. 问 `Authenticate Git with your GitHub credentials?` → 选 `Yes`, 回车;
-4. 问 `How would you like to authenticate?` → 选 `Login with a web browser`, 回车;
-5. 浏览器会自动弹出页面, 点 **Authorize** 授权;
-6. 回到终端, 看到 `Logged in as wenje-ma` 就成功了.
+判据两条, 期望 `25` 与 `942`:
 
-### 开始使用
-
-以后克隆仓库, 只需:
-
-```bash
-gh repo clone wenje-ma/topology
+```powershell
+(Get-ChildItem -LiteralPath $root -Directory).Count
+(Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File -Force | Where-Object { $_.FullName -notmatch "\\.git\\" } | Measure-Object).Count
 ```
 
-注意写法是 **`所有者/仓库名`** (没有网址). 想克隆别的学科, 把 `topology` 换掉即可:
+逐仓库核分支:
 
-```bash
-gh repo clone wenje-ma/< 仓库名> 
+```powershell
+Get-ChildItem -LiteralPath $root -Directory | ForEach-Object { "$($_.Name) " + (git -C $_.FullName rev-parse --abbrev-ref HEAD 2>$null) }
 ```
 
-### 和 `git clone` 的区别
+体量提醒: `primary-mathematics` 约 714 MB, `junior-mathematics` 约 227 MB, `senior-mathematics` 约 212 MB. 只要大学数学就跳过这三个.
 
-**没有本质区别**.`gh` 底层调用的还是 `git`, 只是帮你拼好了网址. 你可以理解为:`gh repo clone` 是"不用背网址版的 `git clone`". 选你觉得顺手的那个即可.
+### 6.5 连不上 github.com
 
-祝同志们学习顺利, Happy mathing! 🚀
+处理顺序, 逐级尝试, 不要跳到关系统安全设置:
+
+1. 换网络, 手机热点优先.
+2. 有现成代理时 `git config --global http.proxy http://127.0.0.1:7890`, 用完 `--unset http.proxy`.
+3. 镜像前缀 `https://gitclone.com/github.com/wenje-ma/<仓库名>.git`, 第三方服务, 可用性自行探测.
+4. 都失败就让交接方打包 zip.
+
+判据: 报错原文里出现 `Failed to connect to github.com port 443` 或长时间无输出, 即按上面顺序处理; 出现 `destination path already exists` 说明已克隆过, 跳过即可; 出现 `Permission denied (publickey)` 说明地址写成了 SSH, 换成 `https://` 开头.
+
+## 7 S6 渲染与阅读
+
+### 7.1 打开
+
+```powershell
+code "$root\wenjemaths"
+```
+
+首次打开会要求信任作者, 选信任, 否则 MPE 不激活.
+
+### 7.2 预览判据
+
+打开 `wenjemaths\forced\dg-mid.md`, 用 MPE 的 `Open Preview to the Side`. 逐项核对:
+
+- 行内公式是斜体变量, 下标落在基线以下;
+- 行间公式有分式横线, 矩阵有方括号, 编号靠右;
+- 中文无方块与乱码;
+- 表格有表头与竖线.
+
+### 7.3 抽样清单
+
+每个文件验一种语法, 五项都通过可认为整体可用.
+
+| 文件 | 验什么 |
+| --- | --- |
+| `wenjemaths\forced\dg-mid.md` | 大量行间公式, 矩阵, 加粗条目名 |
+| `differential-geometry\textbooks\handout\1104.md` | `\mathscr` 等字体宏 |
+| `abstract-algebra\homework-cn\week1.md` | `\substack` 求和下标 |
+| `junior-mathematics\homework-cn\week12.md` | GFM 表格与初等数学 |
+| `wenje-ma\README.md` | shields.io 徽章, 需联网, 离线裂图属正常 |
+
+### 7.4 读全文
+
+预览只用于验渲染, 942 个文件不要逐个开预览, 读文本即可.
+
+```powershell
+Get-Content -LiteralPath "$root\topology\homework-cn\week1.md" -Encoding utf8 -TotalCount 60
+```
+
+必须显式写 `-Encoding utf8`: 文件是 UTF-8 无 BOM, PowerShell 5.1 默认按 ANSI 解码会出乱码.
+
+按主题检索:
+
+```powershell
+Get-ChildItem -LiteralPath $root -Recurse -Filter *.md -File | Select-String -Pattern "弗雷内" -Encoding utf8
+```
+
+顺序建议: 先读 `wenjemaths\forced\` 建立术语口径, 再按 `<仓库>\homework-cn\weekN.md` 顺读. `textbooks\` 里的 `.pdf` 是教材扫描件, 用 PDF 阅读器打开, 不在 md 渲染范围内.
+
+## 8 可选设置
+
+需要时把下面合并进用户 `settings.json` (命令面板 `Preferences: Open User Settings (JSON)`).
+
+```json
+{
+  "files.encoding": "utf8",
+  "editor.wordWrap": "on",
+  "security.workspace.trust.enabled": false,
+  "markdown-preview-enhanced.mathRenderingOption": "KaTeX",
+  "markdown-preview-enhanced.breakOnSingleNewLine": true,
+  "markdown-preview-enhanced.scrollSync": true
+}
+```
+
+说明: KaTeX 是插件内置的, 离线可用; `breakOnSingleNewLine` 保持 `true`, 因为仓库行文是一句一行; `wordWrap` 因为公式行很长.
+
+## 9 故障排查
+
+| 现象 | 原因 | 处理 |
+| --- | --- | --- |
+| `git` 或 `code` 不是命令 | 未装好, 或终端是装前开的 | 关掉终端与 VSCode 重开 |
+| 预览空白或无反应 | 工作区未信任, 插件被禁用 | 见 5 节两条解法 |
+| 公式显示源码 | 看的是编辑区, 预览未开 | 走 MPE 命令面板 |
+| 公式区红字报错 | KaTeX 不认该宏 | 改 `mathRenderingOption` 为 `MathJax` |
+| 中文乱码 | 编码按 ANSI 解码 | 编辑器右下角改 UTF-8; 命令加 `-Encoding utf8` |
+| 图片裂图 | 图片缺失或需联网 | 见第 10 节 |
+| 克隆转圈或报 443 | 网络 | 见 6.5 节 |
+| `already exists` | 已克隆过 | 跳过 |
+| `Permission denied (publickey)` | 用了 SSH 地址 | 换 https |
+| 安装包被 SmartScreen 拦 | 未知程序拦截 | 更多信息, 仍要运行 |
+
+## 10 已知例外
+
+这些不是环境问题, 写进交付说明里, 不要当故障处理.
+
+- `primary-mathematics\homework-cn\week116.md` 与 `primary-mathematics\homework-en\week116.md`: 有一处写成 `$1$$m$`, 两个行内公式紧贴, 后续内容可能被当成公式块, 该文件渲染异常.
+- `states-python\3-报告\论文.md`: 引用 4 张 `figures\fig_*.png`, 仓库里实际是同名 `.pdf`, 4 张裂图.
+- `social-task\通讯.md`: 引用 `通讯_files\*.png`, 该目录未入库, 6 张裂图; 该仓库本身非公开.
+- `wenje-ma\README.md`: shields.io 徽章需联网.
+- `metropolis\README.md`: 代码块内是整段 LaTeX 源码, 属正常展示.
+- `anki-mdmath` 与 `applied-multivariate-statistics` 无 md, 目录为空属正常.
+
+## 11 边界
+
+- 不执行 `git push`, `git reset`, `git clean`, 不删 `.git` 目录.
+- 不把 md 转成 docx 或 pdf 交付.
+- 不为连通 github.com 而关杀毒或防火墙, 不装来源不明的加速器.
+- 路径只用英文与数字, 中文或空格会让部分命令失败.
+
+## 12 回报格式
+
+完成后回三行, 每行都要有可核对的数字或输出:
+
+1. 版本: Git 版本号, VSCode 版本号, MPE 版本号.
+2. 数量: 仓库目录数, md 总数, 以及第 6.4 节两条计数命令的原始输出.
+3. 渲染: 第 7.2 节四条判据是否全过, 第 7.3 节五个抽样文件里是否有异常, 有异常就按第 10 节对号入座.
