@@ -450,7 +450,7 @@ $\mathbb{E}^{3}$ 中平均曲率处处恒为零的曲面称为极小曲面.
 
 **讲义: 命题 12.2 (包络的参数方程)**
 
-若 $\mathcal{E}$ 是包络, 则 $\mathcal{E}\left(\alpha\right)=\boldsymbol{r}\left(t\left(\alpha\right);\alpha\right)$, $\alpha\in{I}$, 给出 $\mathcal{E}$ 的参数表示, 其中 $t=t\left(\alpha\right)$ 满足 $\det\left(\frac{\partial\boldsymbol{r}}{\partial{t}},\frac{\partial\boldsymbol{r}}{\partial\alpha}\right)\Big|_{t=t\left(\alpha\right)}=0$, 即 $\frac{\partial\gamma^{1}}{\partial{t}}\frac{\partial\gamma^{2}}{\partial\alpha}-\frac{\partial\gamma^{1}}{\partial\alpha}\frac{\partial\gamma^{2}}{\partial{t}}\Big|_{t=t\left(\alpha\right)}=0$.
+若 $\mathcal{E}$ 是包络, 则 $\mathcal{E}\left(\alpha\right)=\boldsymbol{r}\left(t\left(\alpha\right);\alpha\right)$, $\alpha\in{I}$, 给出 $\mathcal{E}$ 的参数表示, 其中 $t=t\left(\alpha\right)$ 满足 $\det\left.\left(\frac{\partial\boldsymbol{r}}{\partial{t}},\frac{\partial\boldsymbol{r}}{\partial\alpha}\right)\right|_{t=t\left(\alpha\right)}=0$, 即 $\frac{\partial\gamma^{1}}{\partial{t}}\frac{\partial\gamma^{2}}{\partial\alpha}-\frac{\partial\gamma^{1}}{\partial\alpha}\left.\frac{\partial\gamma^{2}}{\partial{t}}\right|_{t=t\left(\alpha\right)}=0$.
 
 **讲义: 命题 12.3 (脊线)**
 

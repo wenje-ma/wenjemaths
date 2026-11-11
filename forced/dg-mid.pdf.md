@@ -110,7 +110,7 @@ format:
 
 **4.3.2 曲面基本定理**: $g_{\alpha\beta}$ 正定, $b_{\alpha\beta}$ 对称满足高斯-科达齐方程组 $\Leftrightarrow$ 存在曲面以 $I,II$ 为基本形式, 刚体运动意义下唯一.
 
-**4.3.3 高斯绝妙定理**: $K=\frac{\det\left(b_{\alpha\beta}\right)}{\det\left(g_{\alpha\beta}\right)}$ 只依赖 $I$ (内蕴); 正交网 $K=-\frac1{2\sqrt{g_{11}g_{22}}}\big(\partial_1\frac{\partial_1g_{22}}{\sqrt{g_{11}g_{22}}}+\partial_2\frac{\partial_2g_{11}}{\sqrt{g_{11}g_{22}}}\big)$.
+**4.3.3 高斯绝妙定理**: $K=\frac{\det\left(b_{\alpha\beta}\right)}{\det\left(g_{\alpha\beta}\right)}$ 只依赖 $I$ (内蕴); 正交网 $K=-\frac1{2\sqrt{g_{11}g_{22}}}\left(\partial_1\frac{\partial_1g_{22}}{\sqrt{g_{11}g_{22}}}+\partial_2\frac{\partial_2g_{11}}{\sqrt{g_{11}g_{22}}}\right)$.
 
 **5.1.1 测地/法曲率**: $k_g$ 为 $\ddot{\boldsymbol{r}}$ 切向投影(带号), $k_n=b_{\alpha\beta}\dot{u}^\alpha\dot{u}^\beta$; $k_g$ 只依赖 $I$ (内蕴).
 
