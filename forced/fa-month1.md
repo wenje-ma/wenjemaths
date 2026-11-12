@@ -336,7 +336,7 @@ $\varepsilon$-网中的点可以不必属于 $A$ 本身.
 
 (i) $A$ 是有界集;
 
-(ii) (等度 $L^{p}$-胎紧) 对每个 $\varepsilon>0$, 存在 $M>0$, 使得 $\int_{\left\{\left|x\right|>{}M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm{d}m<\varepsilon^{p}$, $\forall{f}\in{A}$;
+(ii) (等度 $L^{p}$-胎紧) 对每个 $\varepsilon>0$, 存在 $M>0$, 使得 $\int_{\left\{\left|x\right|>M\right\}}\left|f\left(x\right)\right|^{p}\,\mathrm{d}m<\varepsilon^{p}$, $\forall{f}\in{A}$;
 
 (iii) (等度 $L^{p}$-范数连续) 对每个 $\varepsilon>0$, 存在 $\delta>0$, 使得 $\left\|f\left(x+h\right)-f\left(x\right)\right\|_{p}\le\varepsilon$, $\forall{f}\in{A}$, $\forall\left|h\right|<\delta$.
 
