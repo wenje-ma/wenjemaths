@@ -420,7 +420,7 @@ $$
 \varphi\left(\alpha{x}+\beta{y},z\right)=\alpha\varphi\left(x,z\right)+\beta\varphi\left(y,z\right),\quad\varphi\left(z,\alpha{x}+\beta{y}\right)=\overline\alpha\varphi\left(z,x\right)+\overline\beta\varphi\left(z,y\right),
 $$
 
-那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函. (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函. (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|,\quad\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数. ## 2.1-1 (零空间闭并不蕴含算子有界) 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界? 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$ \left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}. $$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故
+那么称 $\varphi\left(\cdot,\cdot\right)$ 是 $H$ 上的共轭双线性泛函. (ii) 如果对于任何 $x,y\in{H}$ 成立 $\varphi\left(x,y\right)=\overline{\varphi\left(y,x\right)}$, 那么称 $\varphi\left(x,y\right)$ 是 $H$ 上的埃尔米特泛函. (iii) 对共轭双线性泛函 $\varphi$, 如果有正常数 $c$ 使得 $\left|\varphi\left(x,y\right)\right|\le{c}\left\|x\right\|\left\|y\right\|,\quad\forall{x},y\in{H}$, 那么称 $\varphi$ 是 $H$ 上有界的共轭双线性泛函, $\left\|\varphi\right\|=\sup_{\left\|x\right\|=\left\|y\right\|=1}\left|\varphi\left(x,y\right)\right|$ 称为泛函 $\varphi$ 的范数. ## 2.1-1 (零空间闭并不蕴含算子有界) 设 $T$ 是赋范线性空间 $X$ 到赋范线性空间 $Y$ 的线性算子. 如果零空间 $\ker\left(T\right)=\left\{x:Tx=0\right\}$ 是闭集, 问 $T$ 是否有界? 不一定. 反例取自**例 2.1.9 (微分算子的无界性)**: 取 $X=C^{\left(1\right)}\left[a,b\right]$ 按 $C\left[a,b\right]$ 的范数 $\left\|x\right\|=\max_{t\in\left[a,b\right]}\left|x\left(t\right)\right|$, $Y=C\left[a,b\right]$, $T=D$, 其中 $$\left(Dx\right)\left(t\right)=\frac{\mathrm{d}}{\mathrm{d}t}x\left(t\right),\quad{x}\in{X}.$$ 先证 $\ker{D}$ 是 $X$ 的闭集. 由 $Dx=0$ 当且仅当 $x'$ 在 $\left[a,b\right]$ 上恒为 $0$, 而闭区间上导数恒为 $0$ 的函数是常值函数, 故
 
 $$
 \ker{D}=\left\{x\in{X}:\,\exists\,c\in\mathbb{R},x\left(t\right)=c,\forall\,t\in\left[a,b\right]\right\}.
@@ -485,7 +485,7 @@ $$
 若 $\varphi$ 是直线 $\mathbb{R}$ 上的凸函数, 即
 
 $$
-\varphi\left(tx+\left(1-t\right)y\right)\le{t}\varphi\left(x\right)+\left(1-t\right)\varphi\left(y\right), \forall{x},y\in\mathbb{R}, t\in\left(0,1\right),
+\varphi\left(tx+\left(1-t\right)y\right)\le{t}\varphi\left(x\right)+\left(1-t\right)\varphi\left(y\right),\forall{x},y\in\mathbb{R},t\in\left(0,1\right),
 $$
 
 那么图形 $\left\{\left(x,y\right)\in\mathbb{R}^2:y\ge\varphi\left(x\right)\right\}$ 是平面中的一个凸集.
